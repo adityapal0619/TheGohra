@@ -5,17 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Gohra</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<link rel="stylesheet" href="style.css">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap');
 
-    .btn {
+    .btn, .nav-link {
       position: relative;
       overflow: hidden;
       transition: all 0.5s ease-in-out;
     }
 
     .btn::before,
-    .btn::after {
+    .btn::after,
+    .nav-link::before,
+    .nav-link::after {
       content: "";
       position: absolute;
       border-radius: 50%;
@@ -29,18 +34,40 @@
       z-index: -1;
     }
 
-    .btn::before {
+    .btn::before, .nav-link::before {
       background: radial-gradient(circle, rgba(97,56,216,0.6), transparent 60%);
     }
 
-    .btn::after {
+    .btn::after, .nav-link::after {
       background: radial-gradient(circle, rgba(97,56,216,0.3), transparent 60%);
     }
 
     .btn:hover::before,
-    .btn:hover::after {
+    .btn:hover::after,
+    .nav-link:hover::before,
+    .nav-link:hover::after {
       top: 0%;
       opacity: 1;
+    }
+
+    .nav-link:hover {
+      color: #6138D8;
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeSlideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-slide {
+      animation: fadeSlideDown 0.4s ease-in-out;
     }
   </style>
 </head>
@@ -59,22 +86,18 @@
 
         <!-- Desktop Menu -->
         <div class="hidden md:flex items-center space-x-6">
-          <a href="#" class="text-black font-medium transition duration-300 ease-in-out hover:text-blue-500 hover:underline hover:scale-105">Home</a>
-          <a href="#" class="text-black font-medium transition duration-300 ease-in-out hover:text-blue-500 hover:underline hover:scale-105">About</a>
-          <a href="#" class="text-black font-medium transition duration-300 ease-in-out hover:text-blue-500 hover:underline hover:scale-105">Services</a>
-          <a href="#" class="text-black font-medium transition duration-300 ease-in-out hover:text-blue-500 hover:underline hover:scale-105">Contact</a>
-
-          <!-- Fancy Button -->
-          <a href="#"
-             class="btn text-white text-sm px-5 py-2 rounded-full font-semibold bg-[#6138D8] hover:bg-purple-700 shadow-md hover:shadow-purple-600 transform hover:scale-105 transition-all duration-300">
-            Book Demo
-          </a>
+          <a href="#" class="nav-link text-black font-medium transition duration-300 ease-in-out">Home</a>
+          <a href="#" class="nav-link text-black font-medium transition duration-300 ease-in-out">About Us</a>
+          <a href="#" class="nav-link text-black font-medium transition duration-300 ease-in-out">Our Partners</a>
+          <a href="#" class="nav-link text-black font-medium transition duration-300 ease-in-out">Our Services</a>
+          <a href="#" class="nav-link text-black font-medium transition duration-300 ease-in-out">Career</a>
+          <a href="#" class="nav-link text-black font-medium transition duration-300 ease-in-out">Contact us</a>
         </div>
 
         <!-- Mobile Menu Button -->
         <div class="md:hidden">
-          <button id="menu-btn" class="text-black focus:outline-none">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+          <button id="menu-btn" class="text-black focus:outline-none transition transform hover:scale-110">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2"
                  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path stroke-linecap="round" stroke-linejoin="round"
                     d="M4 6h16M4 12h16M4 18h16"></path>
@@ -85,18 +108,247 @@
     </div>
 
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="md:hidden hidden px-4 pb-4">
-      <a href="#" class="block py-2 text-black transition duration-300 ease-in-out hover:text-blue-400 hover:underline hover:scale-105">Home</a>
-      <a href="#" class="block py-2 text-black transition duration-300 ease-in-out hover:text-blue-400 hover:underline hover:scale-105">About</a>
-      <a href="#" class="block py-2 text-black transition duration-300 ease-in-out hover:text-blue-400 hover:underline hover:scale-105">Services</a>
-      <a href="#" class="block py-2 text-black transition duration-300 ease-in-out hover:text-blue-400 hover:underline hover:scale-105">Contact</a>
-      <a href="#"
-         class="btn block mt-2 text-center text-white text-sm px-5 py-2 rounded-full font-semibold bg-[#6138D8] hover:bg-purple-700 shadow-md hover:shadow-purple-600 transform hover:scale-105 transition-all duration-300">
-        Book Demo
-      </a>
+    <div id="mobile-menu" class="md:hidden hidden flex-col px-4 pb-4 space-y-2 animate__animated">
+      <a href="#" class="nav-link block py-2 text-black fade-slide transition duration-300 ease-in-out">Home</a>
+      <a href="#" class="nav-link block py-2 text-black fade-slide transition duration-300 ease-in-out">About Us</a>
+      <a href="#" class="nav-link block py-2 text-black fade-slide transition duration-300 ease-in-out">Our Partners</a>
+      <a href="#" class="nav-link block py-2 text-black fade-slide transition duration-300 ease-in-out">Our Services</a>
+      <a href="#" class="nav-link block py-2 text-black fade-slide transition duration-300 ease-in-out">Career</a>
+      <a href="#" class="nav-link block py-2 text-black fade-slide transition duration-300 ease-in-out">Contact us</a>
     </div>
   </nav>
+<!-- Combined Hero + Strengths Section -->
+<section class="relative w-full min-h-screen bg-cover bg-center bg-no-repeat px-4 py-20" style="background-image: url('Photos/hero.jpg');">
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-black bg-opacity-60 z-0"></div>
 
+  <!-- Main Content -->
+  <div class="relative z-10 max-w-7xl mx-auto flex flex-col justify-center items-center text-center text-white">
+
+    <!-- Hero Content -->
+    <div class="mb-16">
+      <p class="text-orange-400 text-lg font-semibold mb-4 animate-fadeInUp">Gohra</p>
+      <h1 class="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight animate-fadeInUp delay-200">
+        Good Planning Means Success<br />In Business
+      </h1>
+    </div>
+
+    <!-- Company Strengths -->
+    <div class="bg-white bg-opacity-90 rounded-2xl p-10 w-full">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-gray-900">Why Choose Gohra?</h2>
+        <p class="text-gray-600 mt-4 text-lg">
+          We provide innovative, scalable, and industry-driven IT solutions tailored to your business growth.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl border transition duration-300">
+          <div class="flex items-center justify-center w-14 h-14 rounded-full bg-purple-100 mb-4 mx-auto">
+            <svg class="w-7 h-7 text-purple-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 17v-2a4 4 0 114 0v2m1 4H6a2 2 0 01-2-2v-2a2 2 0 012-2h12a2 2 0 012 2v2a2 2 0 01-2 2h-3z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-purple-900 mb-3 text-center">Trusted Company</h3>
+          <p class="text-gray-700 text-center">
+            We deliver reliable IT systems to companies solving complex business challenges—guiding your journey as your trusted advisor.
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl border transition duration-300">
+          <div class="flex items-center justify-center w-14 h-14 rounded-full bg-blue-100 mb-4 mx-auto">
+            <svg class="w-7 h-7 text-blue-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 01.88 7.902A5.5 5.5 0 0112.5 21h-1a5.5 5.5 0 01-4.38-9.098A4 4 0 0116 7z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-blue-900 mb-3 text-center">Innovative Workforce</h3>
+          <p class="text-gray-700 text-center">
+            Our skilled team adds innovation and modern thinking, ensuring cutting-edge performance and product delivery.
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl border transition duration-300">
+          <div class="flex items-center justify-center w-14 h-14 rounded-full bg-green-100 mb-4 mx-auto">
+            <svg class="w-7 h-7 text-green-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 10h4l3 10h7l3-10h4" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-green-900 mb-3 text-center">Customisable Solution</h3>
+          <p class="text-gray-700 text-center">
+            We craft tailored solutions for industries like Retail, IT, Manufacturing, and Real Estate, fitting your unique goals.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Our Services Section with Scroll Animation -->
+<section class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-6 md:px-10 lg:px-16">
+
+    <!-- Heading -->
+    <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
+      <div data-aos="fade-right" data-aos-duration="1000">
+        <h2 class="text-3xl md:text-4xl font-bold text-purple-900 mb-4">Our Services</h2>
+      </div>
+      <div data-aos="fade-left" data-aos-duration="1000">
+        <p class="text-gray-700 text-lg leading-relaxed font-medium">
+          Gohra Private Limited delivers innovative technology solutions built around 
+          <span class="font-semibold text-purple-800">Digital</span>, 
+          <span class="font-semibold text-purple-800">Cloud</span>, 
+          <span class="font-semibold text-purple-800">ERP Solutions</span>, 
+          <span class="font-semibold text-purple-800">HR Services</span>, 
+          <span class="font-semibold text-purple-800">Infrastructure</span> and 
+          <span class="font-semibold text-purple-800">Engineering</span>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Cards with animation -->
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <!-- Card 1 -->
+      <div class="group bg-white p-6 rounded-xl shadow-md border border-gray-200 transform transition duration-300 hover:scale-105 hover:shadow-xl"
+           data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+        <div class="mb-4 flex justify-center">
+          <div class="border border-orange-400 rounded-md p-3 transition duration-300 group-hover:rotate-12">
+            <svg class="w-8 h-8 text-orange-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M6 10h12M6 14h12M6 18h12"></path>
+            </svg>
+          </div>
+        </div>
+        <h3 class="text-xl font-bold text-purple-900 mb-2 text-center">Microsoft Dynamics 365</h3>
+        <p class="text-gray-700 text-center leading-relaxed mb-4">
+          The Dynamics 365 suite is available in two editions, Business or Enterprise, with various levels of features and applications.
+        </p>
+        <div class="flex justify-center">
+          <button class="bg-purple-900 text-white rounded-full px-5 py-2 hover:bg-purple-800 flex items-center gap-2">
+            <span>&raquo;</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="group bg-white p-6 rounded-xl shadow-md border border-gray-200 transform transition duration-300 hover:scale-105 hover:shadow-xl"
+           data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+        <div class="mb-4 flex justify-center">
+          <div class="border border-orange-400 rounded-md p-3 transition duration-300 group-hover:rotate-12">
+            <svg class="w-8 h-8 text-orange-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </div>
+        </div>
+        <h3 class="text-xl font-bold text-purple-900 mb-2 text-center">Microsoft Dynamics NAV</h3>
+        <p class="text-gray-700 text-center leading-relaxed mb-4">
+          Dynamics NAV is an ERP system that supports finance, manufacturing, and customer relationship management (CRM).
+        </p>
+        <div class="flex justify-center">
+          <button class="bg-purple-900 text-white rounded-full px-5 py-2 hover:bg-purple-800 flex items-center gap-2">
+            <span>&raquo;</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="group bg-white p-6 rounded-xl shadow-md border border-gray-200 transform transition duration-300 hover:scale-105 hover:shadow-xl"
+           data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
+        <div class="mb-4 flex justify-center">
+          <div class="border border-orange-400 rounded-md p-3 transition duration-300 group-hover:rotate-12">
+            <svg class="w-8 h-8 text-orange-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M11 11V3H3v8h8zM21 11V3h-8v8h8zM11 21v-8H3v8h8zM21 21v-8h-8v8h8z"></path>
+            </svg>
+          </div>
+        </div>
+        <h3 class="text-xl font-bold text-purple-900 mb-2 text-center">Web Development</h3>
+        <p class="text-gray-700 text-center leading-relaxed mb-4">
+          Website development covers everything from static pages to complex full-stack applications.
+        </p>
+        <div class="flex justify-center">
+          <button class="bg-purple-900 text-white rounded-full px-5 py-2 hover:bg-purple-800 flex items-center gap-2">
+            <span>&raquo;</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section id="our-clients">
+    <h2>Our Clients</h2>
+    <p>We are proud to collaborate with some amazing companies.</p>
+    <div class="slider">
+      <div class="slides">
+        <div class="slide"><img src="Photos/company-1.png" alt="Client 1"></div>
+        <div class="slide"><img src="Photos/company-2.png" alt="Client 2"></div>
+        <div class="slide"><img src="Photos/company-3.png" alt="Client 3"></div>
+        <div class="slide"><img src="Photos/company-4.png" alt="Client 4"></div>
+        <div class="slide"><img src="Photos/company-5.png" alt="Client 5"></div>
+        <div class="slide"><img src="Photos/company-6.png" alt="Client 6"></div>
+        <div class="slide"><img src="Photos/company-7.png" alt="Client 7"></div>
+        <div class="slide"><img src="Photos/company-8.jpg" alt="Client 8"></div>
+        <div class="slide"><img src="Photos/company-9.jpg" alt="Client 9"></div>
+        <div class="slide"><img src="Photos/company-10.webp" alt="Client 10"></div>
+        <div class="slide"><img src="Photos/company-11.jpeg" alt="Client 11"></div>
+        <!-- Duplicate slides for seamless effect -->
+        <div class="slide"><img src="Photos/company-1.png" alt="Client 1"></div>
+        <div class="slide"><img src="Photos/company-2.png" alt="Client 2"></div>
+        <div class="slide"><img src="Photos/company-3.png" alt="Client 3"></div>
+        <div class="slide"><img src="Photos/company-4.png" alt="Client 4"></div>
+        <div class="slide"><img src="Photos/company-5.png" alt="Client 5"></div>
+        <div class="slide"><img src="Photos/company-6.png" alt="Client 6"></div>
+        <div class="slide"><img src="Photos/company-7.png" alt="Client 7"></div>
+        <div class="slide"><img src="Photos/company-8.jpg" alt="Client 8"></div>
+        <div class="slide"><img src="Photos/company-9.jpg" alt="Client 9"></div>
+        <div class="slide"><img src="Photos/company-10.webp" alt="Client 10"></div>
+        <div class="slide"><img src="Photos/company-11.jpeg" alt="Client 11"></div>
+      </div>
+    </div>
+  </section>
+  <!-- footer section -->
+  <footer class="footer">
+    <div class="footer-content">
+        <div class="footer-left">
+            <img src="Photos/Thelogo.png" alt="eXp Realty Logo" class="logo">
+            <address>
+              F2, Sector 8<br>
+              Noida Uttar Pradesh<br>
+             Gautam Buddha Nagar, Uttar Pradesh, India<br>
+            </address>
+        </div>
+        <div class="footer-center">
+            <ul>
+                <li><a href="https://www.thegohra.com/">Home</a></li>
+                <li><a href="https://www.thegohra.com/about-us.html">About Us</a></li>
+                <li><a href="https://www.thegohra.com/career.html">Career</a></li>
+                <li><a href="https://www.thegohra.com/contact.html">Contact Us</a></li>
+                
+            </ul>
+        </div>
+        <div class="footer-right">
+            <ul>
+                <li><a href="#">Services</a></li>
+                <li><a href="https://www.thegohra.com/microsoft-dynamics-365.html">Microsoft Dynamics 365</a></li>
+                <li><a href="https://www.thegohra.com/microsoft-dynamics-nav.html">Microsoft Dynamics NAV</a></li>
+                <li><a href="https://www.thegohra.com/web-development.html">Web Development</a></li>
+                <li><a href="https://www.thegohra.com/product-development.html">Product Development</a></li>
+                <li><a href="https://www.thegohra.com/technical-support.html">Data Process Outsources</a></li>
+                <li><a href="https://www.thegohra.com/technical-support.html">Technical Support</a></li>
+            </ul>
+        </div>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/thegohra"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://in.linkedin.com/company/gohra-private-limited"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/thegohra/"><i class="fab fa-instagram"></i></a>
+        </div>
+        
+    </div>
+    <p class="copyright">Copyright © 2021 The Gohra Pvt. Ltd. All Rights Reserved</p>
+</footer>
   <!-- Script to Toggle Menu -->
   <script>
     const menuBtn = document.getElementById('menu-btn');
@@ -104,7 +356,9 @@
 
     menuBtn.addEventListener('click', () => {
       mobileMenu.classList.toggle('hidden');
+      mobileMenu.classList.toggle('flex');
     });
+    AOS.init();
   </script>
 
 </body>
