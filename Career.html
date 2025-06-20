@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Careers at GOHRA</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f8fafc;
+    }
+    .hero-bg {
+      background-image: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085');
+      background-size: cover;
+      background-position: center;
+    }
+  </style>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="text-gray-800">
+    <!-- Navbar -->
+  <nav class="bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+
+        <!-- Logo -->
+        <div class="flex items-center space-x-3">
+          <img src="Photos/logo.jpg" alt="The Gohra Logo"
+               class="h-20 w-auto object-contain" />
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center space-x-6">
+          <a href="index.html" class="nav-link text-black font-medium transition duration-300 ease-in-out">Home</a>
+          <a href="AboutUs.html" class="nav-link text-black font-medium transition duration-300 ease-in-out">About Us</a>
+          <a href="#" class="nav-link text-black font-medium transition duration-300 ease-in-out">Our Partners</a>
+          <a href="services.html" class="nav-link text-black font-medium transition duration-300 ease-in-out">Our Services</a>
+          <a href="Career.html" class="nav-link text-black font-medium transition duration-300 ease-in-out">Career</a>
+          <a href="#" class="nav-link text-black font-medium transition duration-300 ease-in-out">Contact us</a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden">
+          <button id="menu-btn" class="text-black focus:outline-none transition transform hover:scale-110">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2"
+                 viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden flex-col px-4 pb-4 space-y-2 animate__animated">
+      <a href="#" class="nav-link block py-2 text-black fade-slide transition duration-300 ease-in-out">Home</a>
+      <a href="#" class="nav-link block py-2 text-black fade-slide transition duration-300 ease-in-out">About Us</a>
+      <a href="#" class="nav-link block py-2 text-black fade-slide transition duration-300 ease-in-out">Our Partners</a>
+      <a href="#" class="nav-link block py-2 text-black fade-slide transition duration-300 ease-in-out">Our Services</a>
+      <a href="#" class="nav-link block py-2 text-black fade-slide transition duration-300 ease-in-out">Career</a>
+      <a href="#" class="nav-link block py-2 text-black fade-slide transition duration-300 ease-in-out">Contact us</a>
+    </div>
+  </nav>
+  <!-- Hero Section -->
+  <section class="hero-bg py-24 text-white text-center">
+    <div class="bg-black bg-opacity-50 py-12 px-6 rounded-xl max-w-3xl mx-auto">
+      <h1 class="text-5xl font-extrabold mb-4">Join Our Team</h1>
+      <p class="text-lg">Explore exciting career opportunities at GOHRA and grow with us in the Real Estate & Tech sectors.</p>
+    </div>
+  </section>
+
+  <!-- Open Positions -->
+  <section class="py-16 px-6 max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-12">Current Openings</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <h3 class="text-xl font-semibold text-blue-800 mb-2">Business Development Executive</h3>
+        <p class="mb-2">Real Estate Division | Nashik, India</p>
+        <p>Manage client relationships, drive project marketing, and increase property sales.</p>
+        <a href="#" class="text-blue-600 font-medium mt-4 inline-block">Apply Now</a>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <h3 class="text-xl font-semibold text-blue-800 mb-2">Full Stack Developer</h3>
+        <p class="mb-2">Technology Division | Remote</p>
+        <p>Work on dynamic portals, eCommerce systems, and custom D365 integrations.</p>
+        <a href="#" class="text-blue-600 font-medium mt-4 inline-block">Apply Now</a>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <h3 class="text-xl font-semibold text-blue-800 mb-2">UI/UX Designer</h3>
+        <p class="mb-2">Tech & Branding | Remote</p>
+        <p>Create user-centered designs for web platforms and marketing campaigns.</p>
+        <a href="#" class="text-blue-600 font-medium mt-4 inline-block">Apply Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Culture Section -->
+  <section class="py-20 bg-blue-50 text-center">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl font-bold mb-6">Why Work with GOHRA?</h2>
+      <p class="mb-6">We believe in growth, innovation, and collaboration. At GOHRA, you’ll find a supportive environment to push your career boundaries across both real estate and tech industries.</p>
+      <ul class="text-left text-blue-800 list-disc list-inside">
+        <li>Flexible work culture with hybrid & remote roles</li>
+        <li>Opportunities in both real estate and IT</li>
+        <li>Training and upskilling programs</li>
+        <li>Performance-based incentives</li>
+        <li>Collaborative and creative workspace</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="py-16 bg-blue-900 text-white text-center">
+    <h2 class="text-3xl font-bold mb-4">Think You're a Good Fit?</h2>
+    <p class="mb-6 max-w-xl mx-auto">Submit your resume and a short cover letter to start your journey with GOHRA.</p>
+    <a href="#" class="bg-white text-blue-900 font-bold px-8 py-3 rounded-full hover:bg-blue-100 transition">Apply Now</a>
+  </section>
+
+  <footer class="bg-gray-100 text-center py-6 text-sm text-gray-500">
+    © 2025 GOHRA. All Rights Reserved.
+  </footer>
+</body>
+</html>
