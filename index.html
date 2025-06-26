@@ -7,7 +7,9 @@
   <link rel="stylesheet" href="style.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-  
+  <style>
+
+  </style>
 </head>
 <body class="font-sans">
   <nav class="border-b border-blue-600 px-4 py-3 md:px-8 bg-white shadow-sm">
@@ -18,18 +20,18 @@
       </div>
 
       <!-- Desktop Menu -->
-      <ul class="hidden md:flex items-center space-x-6 text-blue-600 font-medium">
-        <li><a href="index.html" class="hover:underline">Home</a></li>
-        <li><a href="AboutUs.html" class="hover:underline">About Us</a></li>
-        <li><a href="#" class="hover:underline">Our Partners</a></li>
-        <li><a href="#" class="hover:underline">What we do</a></li>
-        <li><a href="Career.html" class="hover:underline">Career</a></li>
-        <li><a href="#" class="hover:underline">Resources</a></li>
+      <ul class="hidden md:flex items-center space-x-6 text-black-600 font-medium">
+        <li><a href="index.html" class="hover:underline" id="navbhar" >Home</a></li>
+        <li><a href="AboutUs.html" class="hover:underline" id="navbhar">About Us</a></li>
+        <li><a href="#" class="hover:underline" id="navbhar">Our Partners</a></li>
+        <li><a href="#" class="hover:underline" id="navbhar">What we do</a></li>
+        <li><a href="Career.html" class="hover:underline" id="navbhar">Career</a></li>
+        <li><a href="#" class="hover:underline" id="navbhar">Resources</a></li>
       </ul>
 
       <!-- Contact & Microsoft -->
       <div class="hidden md:flex items-center space-x-4">
-        <a href="Contactus.html" class="border border-blue-600 text-blue-600 px-4 py-2 rounded font-semibold hover:bg-blue-300">CONTACT US</a>
+        <a href="Contactus.html" class="border border-blue-600 text-white bg-blue-600 px-4 py-2 rounded font-semibold " id="contactus">Connect with Us</a>
         <div class="flex items-center space-x-1">
           <img src="https://img.icons8.com/color/48/000000/microsoft.png" class="h-6 w-6" alt="MS" />
           <span class="text-sm text-gray-600">Microsoft<br>Solutions Partner</span>
@@ -72,7 +74,7 @@
   <!-- Hero Content -->
   <div class="relative z-10 flex flex-col justify-center h-full px-6 md:px-16 text-white max-w-6xl">
     <h1 class="text-3xl md:text-5xl font-bold mb-4 leading-snug">
-      Grow Your Business with a Microsoft<br />
+      Grow Your Business  with  Microsoft<br />
       Dynamics 365 ERP Solution
     </h1>
     <p class="text-lg md:text-xl mb-6 max-w-2xl">
@@ -116,36 +118,28 @@
     </div>
   </div>
 </section>
-
 <section class="bg-gray-100 py-16">
   <div class="max-w-7xl mx-auto px-4 cursor-pointer">
-    <!-- Centered Heading -->
-    <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Our Offerings</h2>
-    
-    <!-- Solutions Cards -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mb-16">
-      
+    <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Microsoft Business Solution</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mb-8">
       <!-- Card 1 -->
       <div class="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-xl transition duration-300">
         <img src="Photos/FinanceOps.jpg" alt="Finance and Operation" class="h-16 mx-auto mb-4" />
         <h3 class="text-lg font-bold text-gray-800">Microsoft Dynamics 365 Finance and Operation</h3>
         <p class="mt-2 text-blue-600 hover:underline cursor-pointer">Read More...</p>
       </div>
-
       <!-- Card 2 -->
       <div class="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-xl transition duration-300">
         <img src="Photos/BusinessCentral.jpg" alt="Business Central" class="h-16 mx-auto mb-4" />
         <h3 class="text-lg font-bold text-gray-800">Microsoft Dynamics 365 Business Central</h3>
         <p class="mt-2 text-blue-600 hover:underline cursor-pointer">Read More...</p>
       </div>
-
       <!-- Card 3 -->
       <div class="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-xl transition duration-300">
         <img src="Photos/SupplyChain.png" alt="Supply Chain Management" class="h-16 mx-auto mb-4" />
         <h3 class="text-lg font-bold text-gray-800">Microsoft Dynamics 365 Supply Chain Management</h3>
         <p class="mt-2 text-blue-600 hover:underline cursor-pointer">Read More...</p>
       </div>
-
       <!-- Card 4 -->
       <div class="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-xl transition duration-300">
         <img src="Photos/Dynamics365.png" alt="Dynamics 365" class="h-16 mx-auto mb-4" />
@@ -153,59 +147,144 @@
         <p class="mt-2 text-blue-600 hover:underline cursor-pointer">Read More...</p>
       </div>
     </div>
-    <!-- Services Cards -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-       <!-- Implementation -->
-      <div class="border p-6 rounded-lg shadow hover:shadow-lg transition duration-300 cursor-pointer bg-white">
-        <div class="mb-4 text-blue-700">
-          <svg class="w-8 h-8 mx-auto" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h18v4H3V3zm0 6h18v12H3V9zm2 2v8h14v-8H5z" />
-          </svg>
+  </div>
+</section>
+<!-- Gohra D365 Section -->
+ <section class="bg-[#1976D2] py-16">
+  <div class="max-w-7xl mx-auto px-4">
+    <h2 class="text-4xl font-bold text-white text-center mb-4">
+      A Full-service Microsoft Solutions Provider
+    </h2>
+    <p class="text-white text-center text-lg mb-12">
+      We're your pals for all things Microsoft Dynamics 365, from seamless setup to support.
+    </p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+      
+      <!-- Card 1 -->
+      <div class="flip-card w-full h-64">
+        <div class="flip-card-inner w-full h-full">
+          <div class="flip-card-front bg-white rounded-xl shadow-lg p-6 text-center">
+            <img src="https://cdn-icons-png.flaticon.com/512/2910/2910791.png" class="w-12 mx-auto mb-4" />
+            <h3 class="text-xl font-semibold">Business Process Review</h3>
+            <div class="text-2xl mt-4">→</div>
+          </div>
+          <div class="flip-card-back bg-[#0087ff] rounded-xl text-white p-6 text-center flex flex-col justify-center">
+            <h3 class="text-xl font-bold mb-2">Business Process Review</h3>
+            <p class="text-sm">We analyze your processes to ensure optimal setup in D365.</p>
+          </div>
         </div>
-        <h3 class="text-xl font-semibold text-center mb-2">Implementation</h3>
-        <p class="text-gray-700 text-center">
-          Our proficient implementation skills enable us to effectively implement Microsoft Dynamics 365, tailoring the platform to correspond with your unique business goals and procedures.
-        </p>
       </div>
-      <!-- Customization -->
-      <div class="border p-6 rounded-lg shadow hover:shadow-lg transition duration-300 cursor-pointer bg-white">
-        <div class="mb-4 text-blue-700">
-          <svg class="w-8 h-8 mx-auto" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4l2 4h4l-3 3 1 4-4-2-4 2 1-4-3-3h4z" />
-          </svg>
+
+      <!-- Card 2 -->
+      <div class="flip-card w-full h-64">
+        <div class="flip-card-inner w-full h-full">
+          <div class="flip-card-front bg-white rounded-xl shadow-lg p-6 text-center">
+            <img src="https://cdn-icons-png.flaticon.com/512/5540/5540610.png" class="w-12 mx-auto mb-4" />
+            <h3 class="text-xl font-semibold">Implementation</h3>
+            <div class="text-2xl mt-4">→</div>
+          </div>
+          <div class="flip-card-back bg-[#0087ff] rounded-xl text-white p-6 text-center flex flex-col justify-center">
+            <h3 class="text-xl font-bold mb-2">Implementation</h3>
+            <p class="text-sm">Seamless Dynamics 365 implementation tailored to your business.</p>
+          </div>
         </div>
-        <h3 class="text-xl font-semibold text-center mb-2">Customization</h3>
-        <p class="text-gray-700 text-center">
-          Our consulting includes customization services, adapting Microsoft Dynamics 365 to your specific requirements, expanding its capabilities, and guaranteeing a solution for your business.
-        </p>
       </div>
-       <!-- Migration -->
-      <div class="border p-6 rounded-lg shadow hover:shadow-lg transition duration-300 cursor-pointer bg-white">
-        <div class="mb-4 text-blue-700">
-          <svg class="w-8 h-8 mx-auto" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M4 4v6h6M20 20v-6h-6M4 20l16-16" />
-          </svg>
+
+      <!-- Card 3 -->
+      <div class="flip-card w-full h-64">
+        <div class="flip-card-inner w-full h-full">
+          <div class="flip-card-front bg-white rounded-xl shadow-lg p-6 text-center">
+            <img src="https://cdn-icons-png.flaticon.com/512/2950/2950651.png" class="w-12 mx-auto mb-4" />
+            <h3 class="text-xl font-semibold">Support</h3>
+            <div class="text-2xl mt-4">→</div>
+          </div>
+          <div class="flip-card-back bg-[#0087ff] rounded-xl text-white p-6 text-center flex flex-col justify-center">
+            <h3 class="text-xl font-bold mb-2">Support</h3>
+            <p class="text-sm">24/7 support to maintain stability and productivity in D365.</p>
+          </div>
         </div>
-        <h3 class="text-xl font-semibold text-center mb-2">Migration</h3>
-        <p class="text-gray-700 text-center">
-          Our consulting services facilitate data migration to Microsoft Dynamics 365 while maintaining integrity and optimizing functionality, facilitating smooth transitions.
-        </p>
       </div>
-      <!-- Support -->
-      <div class="border p-6 rounded-lg shadow hover:shadow-lg transition duration-300 cursor-pointer bg-white">
-        <div class="mb-4 text-blue-700">
-          <svg class="w-8 h-8 mx-auto" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M9 17v-2a4 4 0 014-4h2a4 4 0 014 4v2M9 17v2a2 2 0 104 0v-2M9 17H5a2 2 0 01-2-2v-5a2 2 0 012-2h1" />
-          </svg>
+
+      <!-- Card 4 -->
+      <div class="flip-card w-full h-64">
+        <div class="flip-card-inner w-full h-full">
+          <div class="flip-card-front bg-white rounded-xl shadow-lg p-6 text-center">
+            <img src="https://cdn-icons-png.flaticon.com/512/843/843271.png" class="w-12 mx-auto mb-4" />
+            <h3 class="text-xl font-semibold">Upgrade</h3>
+            <div class="text-2xl mt-4">→</div>
+          </div>
+          <div class="flip-card-back bg-[#0087ff] rounded-xl text-white p-6 text-center flex flex-col justify-center">
+            <h3 class="text-xl font-bold mb-2">Upgrade</h3>
+            <p class="text-sm">We ensure a smooth upgrade to the latest version of Dynamics 365.</p>
+          </div>
         </div>
-        <h3 class="text-xl font-semibold text-center mb-2">Support</h3>
-        <p class="text-gray-700 text-center">
-          Our services provide ongoing support, swiftly resolving questions and problems to ensure Microsoft Dynamics 365 runs smoothly and maintains business productivity.
-        </p>
       </div>
+
+      <!-- Card 5 -->
+      <div class="flip-card w-full h-64">
+        <div class="flip-card-inner w-full h-full">
+          <div class="flip-card-front bg-white rounded-xl shadow-lg p-6 text-center">
+            <img src="https://cdn-icons-png.flaticon.com/512/616/616489.png" class="w-12 mx-auto mb-4" />
+            <h3 class="text-xl font-semibold">Migration</h3>
+            <div class="text-2xl mt-4">→</div>
+          </div>
+          <div class="flip-card-back bg-[#0087ff] rounded-xl text-white p-6 text-center flex flex-col justify-center">
+            <h3 class="text-xl font-bold mb-2">Migration</h3>
+            <p class="text-sm">We handle data migration with integrity and zero data loss.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="flip-card w-full h-64">
+        <div class="flip-card-inner w-full h-full">
+          <div class="flip-card-front bg-white rounded-xl shadow-lg p-6 text-center">
+            <img src="https://cdn-icons-png.flaticon.com/512/149/149221.png" class="w-12 mx-auto mb-4" />
+            <h3 class="text-xl font-semibold">Integration</h3>
+            <div class="text-2xl mt-4">→</div>
+          </div>
+          <div class="flip-card-back bg-[#0087ff] rounded-xl text-white p-6 text-center flex flex-col justify-center">
+            <h3 class="text-xl font-bold mb-2">Integration</h3>
+            <p class="text-sm">Connect D365 with your existing tools, platforms, and systems.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 7 -->
+      <div class="flip-card w-full h-64">
+        <div class="flip-card-inner w-full h-full">
+          <div class="flip-card-front bg-white rounded-xl shadow-lg p-6 text-center">
+            <img src="https://cdn-icons-png.flaticon.com/512/610/610193.png" class="w-12 mx-auto mb-4" />
+            <h3 class="text-xl font-semibold">Customization</h3>
+            <div class="text-2xl mt-4">→</div>
+          </div>
+          <div class="flip-card-back bg-[#0087ff] rounded-xl text-white p-6 text-center flex flex-col justify-center">
+            <h3 class="text-xl font-bold mb-2">Customization</h3>
+            <p class="text-sm">We tailor Dynamics 365 to suit your exact business workflows.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 8 -->
+      <div class="flip-card w-full h-64">
+        <div class="flip-card-inner w-full h-full">
+          <div class="flip-card-front bg-white rounded-xl shadow-lg p-6 text-center">
+            <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" class="w-12 mx-auto mb-4" />
+            <h3 class="text-xl font-semibold text-[15px]">Dedicated Contractual Resources</h3>
+            <div class="text-2xl mt-4">→</div>
+          </div>
+          <div class="flip-card-back bg-[#0087ff] rounded-xl text-white p-6 text-center flex flex-col justify-center">
+            <h3 class="text-lg font-bold mb-2">Contractual Resources</h3>
+            <p class="text-sm">Access to expert resources on-demand for your business needs.</p>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
+
 <!-- Gohra D365 Video Section -->  
 <section id="gohra-d365-video" class="bg-blue-50 py-16">
   <div class="container mx-auto px-6 md:px-12 flex flex-col lg:flex-row items-center lg:items-start gap-10">
