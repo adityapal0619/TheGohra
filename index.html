@@ -6,59 +6,102 @@
   <title>GOHRA</title>
   <link rel="stylesheet" href="style.css">
   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
   <style>
 
   </style>
 </head>
 <body class="font-sans">
-  <nav class="border-b border-blue-600 px-4 py-3 md:px-8 bg-white shadow-sm">
-    <div class="flex items-center justify-between">
-      <!-- Logo Section -->
-      <div class="flex items-center space-x-3">
-        <img src="Photos/logo.png" alt="Logo" class="h-11 w-30">
-      </div>
+ <!-- Mega Navigation Bar with Tailwind CSS -->
+<nav class="border-b px-4 py-3 md:px-8 bg-white shadow-sm relative z-50">
+  <div class="flex items-center justify-between">
+    <!-- Logo -->
+    <div class="flex items-center space-x-3">
+      <img src="Photos/logo.png" alt="Logo" class="h-11 w-30">
+    </div>
 
-      <!-- Desktop Menu -->
-      <ul class="hidden md:flex items-center space-x-6 text-black-600 font-medium">
-        <li><a href="index.html" class="hover:underline" id="navbhar" >Home</a></li>
-        <li><a href="AboutUs.html" class="hover:underline" id="navbhar">About Us</a></li>
-        <li><a href="#" class="hover:underline" id="navbhar">Our Partners</a></li>
-        <li><a href="#" class="hover:underline" id="navbhar">What we do</a></li>
-        <li><a href="Career.html" class="hover:underline" id="navbhar">Career</a></li>
-        <li><a href="#" class="hover:underline" id="navbhar">Resources</a></li>
-      </ul>
+    <!-- Desktop Menu -->
+    <ul class="hidden md:flex items-center space-x-6 text-black font-medium">
+      <li><a href="index.html" class="hover:text-blue-600">Home</a></li>
+      <li><a href="AboutUs.html" class="hover:text-blue-600">About Us</a></li>
+      <li><a href="#" class="hover:text-blue-600">Our Partners</a></li>
 
-      <!-- Contact & Microsoft -->
-      <div class="hidden md:flex items-center space-x-4">
-        <a href="Contactus.html" class="border border-blue-600 text-white bg-blue-600 px-4 py-2 rounded font-semibold " id="contactus">Connect with Us</a>
-        <div class="flex items-center space-x-1">
-          <img src="https://img.icons8.com/color/48/000000/microsoft.png" class="h-6 w-6" alt="MS" />
-          <span class="text-sm text-gray-600">Microsoft<br>Solutions Partner</span>
+      <!-- Mega Menu -->
+      <li class="relative group">
+        <button class="hover:text-blue-600 focus:outline-none">Service & Solutions</button>
+        <div class="fixed left-0 top-[70px] mt-3 hidden group-hover:flex bg-black text-white p-8 rounded-lg shadow-xl w-full z-50">
+          <div class="grid grid-cols-3 gap-8 w-full max-w-7xl mx-auto">
+
+            <!-- Column 1 -->
+            <div>
+              <ul class="space-y-1">
+                <li><a href="d365f&o.html" class="hover:underline">Microsoft Dynamics 365 Finance and Operations</a></li>
+                <li><a href="d365central.html" class="hover:underline">Microsoft Dynamics 365 Business Central</a></li>
+                <li><a href="PowerBI.html" class="hover:underline">Power Platform</a></li>
+              </ul>
+            </div>
+
+            <!-- Column 2 -->
+            <div>
+              <ul class="space-y-1">
+                <li><a href="ResourceAugmentation.html" class="hover:underline">Resource Augmentation</a></li>
+              </ul>
+            </div>
+
+            <!-- Column 3 -->
+            <div>
+              <ul class="space-y-1">
+                <li><a href="#" class="hover:underline">Gohra Assist</a></li>
+              </ul>
+            </div>
+
+          </div>
         </div>
+      </li>
+      <li><a href="Career.html" class="hover:text-blue-600">Career</a></li>
+      <li><a href="#" class="hover:text-blue-600">Resources</a></li>
+    </ul>
+
+    <!-- Contact & MS Badge -->
+    <div class="hidden md:flex items-center space-x-4">
+      <a href="Contactus.html" class="border border-blue-600 text-white bg-blue-600 px-4 py-2 rounded font-semibold hover:bg-blue-700">Connect with Us</a>
+      <div class="flex items-center space-x-1">
+        <img src="https://img.icons8.com/color/48/000000/microsoft.png" class="h-6 w-6" alt="MS">
+        <span class="text-sm text-gray-600 leading-tight">Microsoft<br>Solutions Partner</span>
       </div>
-
-      <!-- Mobile Hamburger -->
-      <button id="menuBtn" class="md:hidden text-blue-600 focus:outline-none">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
-          viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round"
-            d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
     </div>
 
-    <!-- Mobile Menu Dropdown -->
-    <div id="mobileMenu" class="mt-3 hidden md:hidden bg-white space-y-2 px-2 pb-4 text-blue-600 font-medium">
-      <a href="#" class="block hover:bg-blue-50 px-2 py-1 rounded">Software</a>
-      <a href="#" class="block hover:bg-blue-50 px-2 py-1 rounded">Service</a>
-      <a href="#" class="block hover:bg-blue-50 px-2 py-1 rounded">Industries</a>
-      <a href="#" class="block hover:bg-blue-50 px-2 py-1 rounded">Partner</a>
-      <a href="#" class="block hover:bg-blue-50 px-2 py-1 rounded">About</a>
-      <a href="#" class="block hover:bg-blue-50 px-2 py-1 rounded">Resources</a>
-      <a href="#" class="block border border-blue-600 text-center px-4 py-2 rounded font-semibold hover:bg-blue-50">CONTACT US</a>
-    </div>
-  </nav>
+    <!-- Hamburger Icon -->
+    <button id="menuBtn" class="md:hidden text-blue-600 focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="mt-3 hidden md:hidden bg-white space-y-2 px-2 pb-4 text-blue-600 font-medium">
+    <a href="#" class="block hover:bg-blue-50 px-2 py-1 rounded">Software</a>
+    <a href="#" class="block hover:bg-blue-50 px-2 py-1 rounded">Service</a>
+    <a href="#" class="block hover:bg-blue-50 px-2 py-1 rounded">Industries</a>
+    <a href="#" class="block hover:bg-blue-50 px-2 py-1 rounded">Partner</a>
+    <a href="#" class="block hover:bg-blue-50 px-2 py-1 rounded">About</a>
+    <a href="#" class="block hover:bg-blue-50 px-2 py-1 rounded">Resources</a>
+    <a href="Contactus.html" class="block border border-blue-600 text-center px-4 py-2 rounded font-semibold hover:bg-blue-50">CONTACT US</a>
+  </div>
+</nav>
+
+<script>
+  // Optional: Add click event to keep dropdown open on click if needed
+  document.querySelectorAll('nav li.group > button').forEach(button => {
+    button.addEventListener('click', (e) => {
+      const dropdown = button.nextElementSibling;
+      dropdown.classList.toggle('hidden');
+    });
+  });
+</script>
+
 <!-- Hero Section -->
   <section class="relative w-full h-screen overflow-hidden">
 
@@ -162,10 +205,10 @@
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
       
       <!-- Card 1 -->
-      <div class="flip-card w-full h-64">
+      <div class="flip-card w-full h-69">
         <div class="flip-card-inner w-full h-full">
           <div class="flip-card-front bg-white rounded-xl shadow-lg p-6 text-center">
-            <img src="https://cdn-icons-png.flaticon.com/512/2910/2910791.png" class="w-12 mx-auto mb-4" />
+            <img src="Photos/maintenance.png" class="w-12 mx-auto mb-4" />
             <h3 class="text-xl font-semibold">Business Process Review</h3>
             <h5 class="text-x1 font-seimibold">We analyze your business processes and align them with D365 to drive smarter operations</h5>
             <div class="text-2xl mt-4">→</div>
@@ -181,7 +224,7 @@
       <div class="flip-card w-full h-64">
         <div class="flip-card-inner w-full h-full">
           <div class="flip-card-front bg-white rounded-xl shadow-lg p-6 text-center">
-            <img src="https://cdn-icons-png.flaticon.com/512/5540/5540610.png" class="w-12 mx-auto mb-4" />
+            <img src="Photos/rocket.png" class="w-12 mx-auto mb-4" />
             <h3 class="text-xl font-semibold">Implementation</h3>
             <h5 class="text-1 font-seimibold">End-to-end Dynamics 365 implementation — seamless, structured, and tailored to your needs</h5>
             <div class="text-2xl mt-4">→</div>
@@ -197,7 +240,7 @@
       <div class="flip-card w-full h-64">
         <div class="flip-card-inner w-full h-full">
           <div class="flip-card-front bg-white rounded-xl shadow-lg p-6 text-center">
-            <img src="https://cdn-icons-png.flaticon.com/512/2950/2950651.png" class="w-12 mx-auto mb-4" />
+            <img src="Photos/customer-service.png" class="w-12 mx-auto mb-4" />
             <h3 class="text-xl font-semibold">Support</h3>
             <h5 class="text-x1 font-seimibold">Ongoing D365 support that actually supports — fast, reliable, and always available</h5>
             <div class="text-2xl mt-4">→</div>
@@ -213,7 +256,7 @@
       <div class="flip-card w-full h-64">
         <div class="flip-card-inner w-full h-full">
           <div class="flip-card-front bg-white rounded-xl shadow-lg p-6 text-center">
-            <img src="https://cdn-icons-png.flaticon.com/512/843/843271.png" class="w-12 mx-auto mb-4" />
+            <img src="Photos/uploading.png" class="w-12 mx-auto mb-4" />
             <h3 class="text-xl font-semibold">Upgrade</h3>
             <h5 class="text-x1 font-seimibold">Upgrade your Dynamics 365 system without the downtime or drama</h5>
             <div class="text-2xl mt-4">→</div>
@@ -229,7 +272,7 @@
       <div class="flip-card w-full h-64">
         <div class="flip-card-inner w-full h-full">
           <div class="flip-card-front bg-white rounded-xl shadow-lg p-6 text-center">
-            <img src="https://cdn-icons-png.flaticon.com/512/992/992651.png" class="w-12 mx-auto mb-4" />
+            <img src="Photos/data-gathering.png" class="w-12 mx-auto mb-4" />
             <h3 class="text-xl font-semibold">Migration</h3>
             <h5 class="text-x1 font-seimibold">Smooth migration to D365 from legacy systems — zero data loss, zero headaches</h5>
             <div class="text-2xl mt-4">→</div>
@@ -245,7 +288,7 @@
       <div class="flip-card w-full h-64">
         <div class="flip-card-inner w-full h-full">
           <div class="flip-card-front bg-white rounded-xl shadow-lg p-6 text-center">
-            <img src="https://cdn-icons-png.flaticon.com/512/149/149221.png" class="w-12 mx-auto mb-4" />
+            <img src="Photos/solution.png" class="w-12 mx-auto mb-4" />
             <h3 class="text-xl font-semibold">Integration</h3>
             <h5 class="text-x1 font-seimibold">We connect Dynamics 365 with your existing tools to create one powerful ecosystem</h5>
             <div class="text-2xl mt-4">→</div>
@@ -261,7 +304,7 @@
       <div class="flip-card w-full h-64">
         <div class="flip-card-inner w-full h-full">
           <div class="flip-card-front bg-white rounded-xl shadow-lg p-6 text-center">
-            <img src="https://cdn-icons-png.flaticon.com/512/610/610193.png" class="w-12 mx-auto mb-4" />
+            <img src="Photos/panel.png" class="w-12 mx-auto mb-4" />
             <h3 class="text-xl font-semibold">Customization</h3>
             <h5 class="text-x1 font-seimibold">Tailored D365 customizations that fit your business like a glove</h5>
             <div class="text-2xl mt-4">→</div>
@@ -277,7 +320,7 @@
       <div class="flip-card w-full h-64">
         <div class="flip-card-inner w-full h-full">
           <div class="flip-card-front bg-white rounded-xl shadow-lg p-6 text-center">
-            <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" class="w-12 mx-auto mb-4" />
+            <img src="Photos/group.png" class="w-12 mx-auto mb-4" />
             <h3 class="text-xl font-semibold text-[15px]">Dedicated Contractual Resources</h3>
             <h5 class="text-x1 font-seimibold">Get skilled D365 experts on contract — fully dedicated, fully integrated with your team</h5>
             <div class="text-2xl mt-4">→</div>
@@ -329,7 +372,10 @@
 
   </div>
 </section>
-<section class="py-12 bg-white" x-data="{ activeTab: 'manufacturing' }">
+<section 
+  class="py-12 bg-cover bg-center bg-no-repeat" 
+  style="background-image: url('Photos/bagroundwhite.jpg');" 
+  x-data="{ activeTab: 'manufacturing' }">
   <div class="text-center mb-8">
     <h2 class="text-3xl font-bold">Industries <span class="text-blue-600">We Serve</span></h2>
   </div>
@@ -361,22 +407,22 @@
     <!-- Image -->
     <div class="w-full md:w-1/2">
       <template x-if="activeTab === 'manufacturing'">
-        <img src="Photos/Manufacturing.jpg" class="rounded shadow-md">
+        <img src="Photos/Manufacturing.jpg" class="rounded-xl shadow-md">
       </template>
       <template x-if="activeTab === 'retail'">
-        <img src="Photos/Retail.jpg" class="rounded shadow-md">
+        <img src="Photos/Retail.jpg" class="rounded-xl shadow-md">
       </template>
       <template x-if="activeTab === 'distribution'">
-        <img src="Photos/Distribution.jpg" class="rounded shadow-md">
+        <img src="Photos/Distribution.jpg" class="rounded-xl shadow-md">
       </template>
       <template x-if="activeTab === 'food'">
-        <img src="Photos/shop.jpg" class="rounded shadow-md">
+        <img src="Photos/shop.jpg" class="rounded-xl shadow-md">
       </template>
       <template x-if="activeTab === 'healthcare'">
-        <img src="Photos/doctor.jpg" class="rounded shadow-md">
+        <img src="Photos/doctor.jpg" class="rounded-xl shadow-md">
       </template>
       <template x-if="activeTab === 'education'">
-        <img src="Photos/Education.jpg" class="rounded shadow-md">
+        <img src="Photos/Education.jpg" class="rounded-xl shadow-md">
       </template>
     </div>
 
@@ -457,47 +503,28 @@
 
 
 <!-- Contact Us-->
- <section class="bg-white py-16" id="contact">
-  <div class="max-w-6xl mx-auto px-4">
-    <div class="text-center mb-12">
-      <h2 class="text-3xl font-bold text-gray-800">Contact Us</h2>
-      <p class="text-gray-600 mt-2">We’d love to hear from you. Please fill out the form below.</p>
-    </div>
+  <!-- Ghora Logo at Bottom Left -->
+<section class="relative bg-black text-white overflow-hidden py-16 mb-6">
+  <!-- Wave SVG Bottom -->
+  <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none rotate-180 z-0">
+    <svg viewBox="0 0 1200 120" preserveAspectRatio="none" class="w-full h-16 fill-black">
+      <path d="M321.39,56.44C194.62,65.58,96.56,40.33,0,0V120H1200V0C1076.96,73.41,933.27,99.39,789.53,92.3,647.26,85.3,558.08,23.19,421.22,30.21,384.87,32.1,354.07,51.88,321.39,56.44Z"/>
+    </svg>
+  </div>
 
-    <form class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-gray-100 p-8 rounded-lg shadow-lg">
-      
-      <!-- Name -->
-      <div class="col-span-1">
-        <label class="block text-gray-700 font-semibold mb-2" for="name">Name</label>
-        <input type="text" id="name" placeholder="Your Name" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400" required>
-      </div>
-
-      <!-- Email -->
-      <div class="col-span-1">
-        <label class="block text-gray-700 font-semibold mb-2" for="email">Email</label>
-        <input type="email" id="email" placeholder="Your Email" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400" required>
-      </div>
-
-      <!-- Subject -->
-      <div class="col-span-2">
-        <label class="block text-gray-700 font-semibold mb-2" for="subject">Subject</label>
-        <input type="text" id="subject" placeholder="Subject" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400">
-      </div>
-
-      <!-- Message -->
-      <div class="col-span-2">
-        <label class="block text-gray-700 font-semibold mb-2" for="message">Message</label>
-        <textarea id="message" rows="5" placeholder="Your Message..." class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400" required></textarea>
-      </div>
-
-      <!-- Submit -->
-      <div class="col-span-2 text-center">
-        <button type="submit" class="bg-blue-600 text-white px-8 py-3 rounded-md font-semibold hover:bg-blue-700 transition duration-300">
-          Send Message
-        </button>
-      </div>
-
-    </form>
+  <!-- Content -->
+  <div class="relative z-10 max-w-7xl mx-auto px-4 flex flex-col items-center justify-center text-center" data-aos="fade-up">
+    <h2 class="text-4xl md:text-5xl font-bold mb-4 leading-tight">
+      Don’t wait—<span class="text-[#0087ff]">reach out now!</span>
+    </h2>
+    <p class="text-lg text-white/90 mb-8 max-w-2xl">
+      We look forward to connecting with you and discovering how we can support your goals.
+    </p>
+    <a href="Contactus.html"
+      class="inline-block bg-[#0087ff] hover:bg-blue-600 text-white font-semibold px-8 py-3 rounded-md transition duration-300 shadow-lg"
+      data-aos="zoom-in">
+      Contact us
+    </a>
   </div>
 </section>
 <footer class="bg-black text-white py-10 px-6 md:px-16">
@@ -558,6 +585,10 @@
     &copy; 2025 Gohra Technology. All rights reserved.
   </div>
 </footer>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
   <script>
     // Toggle mobile menu
     const menuBtn = document.getElementById("menuBtn");

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Microsoft Dynamics 365 Business Central | Gohra Technologies</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .flip-inner {
+      transition: transform 0.8s ease;
+      transform-style: preserve-3d;
+      position: relative;
+    }
+    .flip-card:hover .flip-inner {
+      transform: rotateY(180deg);
+    }
+    .flip-front, .flip-back {
+      backface-visibility: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 1rem;
+    }
+    .flip-back {
+      transform: rotateY(180deg);
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <!-- Mega Navigation Bar with Tailwind CSS -->
+<nav class="border-b px-4 py-3 md:px-8 bg-white shadow-sm relative z-50">
+  <div class="flex items-center justify-between">
+    <!-- Logo -->
+    <div class="flex items-center space-x-3">
+      <img src="Photos/logo.png" alt="Logo" class="h-11 w-30">
+    </div>
+
+    <!-- Desktop Menu -->
+    <ul class="hidden md:flex items-center space-x-6 text-black font-medium">
+      <li><a href="index.html" class="hover:text-blue-600">Home</a></li>
+      <li><a href="AboutUs.html" class="hover:text-blue-600">About Us</a></li>
+      <li><a href="#" class="hover:text-blue-600">Our Partners</a></li>
+
+      <!-- Mega Menu -->
+      <li class="relative group">
+        <button class="hover:text-blue-600 focus:outline-none">Service & Solutions</button>
+        <div class="fixed left-0 top-[70px] mt-3 hidden group-hover:flex bg-black text-white p-8 rounded-lg shadow-xl w-full z-50">
+          <div class="grid grid-cols-3 gap-8 w-full max-w-7xl mx-auto">
+
+            <!-- Column 1 -->
+            <div>
+              <ul class="space-y-1">
+                <li><a href="d365f&o.html" class="hover:underline">Microsoft Dynamics 365 Finance and Operations</a></li>
+                <li><a href="d365central.html" class="hover:underline">Microsoft Dynamics 365 Business Central</a></li>
+                <li><a href="PowerBI.html" class="hover:underline">Power Platform</a></li>
+              </ul>
+            </div>
+
+            <!-- Column 2 -->
+            <div>
+              <ul class="space-y-1">
+                <li><a href="ResourceAugmentation.html" class="hover:underline">Resource Augmentation</a></li>
+              </ul>
+            </div>
+
+            <!-- Column 3 -->
+            <div>
+              <ul class="space-y-1">
+                <li><a href="#" class="hover:underline">Gohra Assist</a></li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </li>
+      <li><a href="Career.html" class="hover:text-blue-600">Career</a></li>
+      <li><a href="#" class="hover:text-blue-600">Resources</a></li>
+    </ul>
+
+    <!-- Contact & MS Badge -->
+    <div class="hidden md:flex items-center space-x-4">
+      <a href="Contactus.html" class="border border-blue-600 text-white bg-blue-600 px-4 py-2 rounded font-semibold hover:bg-blue-700">Connect with Us</a>
+      <div class="flex items-center space-x-1">
+        <img src="https://img.icons8.com/color/48/000000/microsoft.png" class="h-6 w-6" alt="MS">
+        <span class="text-sm text-gray-600 leading-tight">Microsoft<br>Solutions Partner</span>
+      </div>
+    </div>
+
+    <!-- Hamburger Icon -->
+    <button id="menuBtn" class="md:hidden text-blue-600 focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="mt-3 hidden md:hidden bg-white space-y-2 px-2 pb-4 text-blue-600 font-medium">
+    <a href="#" class="block hover:bg-blue-50 px-2 py-1 rounded">Software</a>
+    <a href="#" class="block hover:bg-blue-50 px-2 py-1 rounded">Service</a>
+    <a href="#" class="block hover:bg-blue-50 px-2 py-1 rounded">Industries</a>
+    <a href="#" class="block hover:bg-blue-50 px-2 py-1 rounded">Partner</a>
+    <a href="#" class="block hover:bg-blue-50 px-2 py-1 rounded">About</a>
+    <a href="#" class="block hover:bg-blue-50 px-2 py-1 rounded">Resources</a>
+    <a href="Contactus.html" class="block border border-blue-600 text-center px-4 py-2 rounded font-semibold hover:bg-blue-50">CONTACT US</a>
+  </div>
+</nav>
+
+<script>
+  // Optional: Add click event to keep dropdown open on click if needed
+  document.querySelectorAll('nav li.group > button').forEach(button => {
+    button.addEventListener('click', (e) => {
+      const dropdown = button.nextElementSibling;
+      dropdown.classList.toggle('hidden');
+    });
+  });
+</script>
+
+
+  <!-- Hero Section -->
+  <section class="bg-blue-800 text-white py-16 px-4 text-center">
+    <h1 class="text-5xl font-bold mb-4">Microsoft Dynamics 365 Business Central</h1>
+    <p class="text-lg max-w-3xl mx-auto">Comprehensive business management. Work smarter, adapt faster, and perform better with Dynamics 365 Business Central.</p>
+  </section>
+
+  <!-- What is Business Central -->
+  <section class="py-16 px-6 max-w-6xl mx-auto">
+    <div class="bg-white shadow-xl rounded-2xl p-10">
+      <h2 class="text-3xl font-semibold mb-6">What is Microsoft Dynamics 365 Business Central?</h2>
+      <p class="mb-4">Business Central is a business management solution for small and mid-sized organizations that automates processes, including finance, sales, shipping, manufacturing, and services. It's highly adaptable, fast to implement, and configurable to industry needs.</p>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+<!-- Business Central Features Section -->
+<section class="bg-gray-100 py-20 px-4">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="text-4xl font-bold text-center mb-12">Microsoft Dynamics 365 Business Central Features</h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 cursor-pointer">
+
+      <!-- Feature 1 -->
+      <div class="flip-card w-full h-80">
+        <div class="flip-inner w-full h-full">
+          <div class="flip-front bg-blue-600 text-white p-6 rounded-2xl flex flex-col justify-center items-center text-center shadow-lg">
+            <div class="text-4xl mb-3">📈</div>
+            <h3 class="text-xl font-bold">Be ready for growth</h3>
+          </div>
+          <div class="flip-back bg-white text-gray-800 p-6 rounded-2xl flex flex-col justify-center items-center text-center border border-blue-600 shadow-lg">
+            <p class="text-blue-600 font-medium">Support your business now and as it grows with Microsoft Cloud reliability.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="flip-card w-full h-80">
+        <div class="flip-inner w-full h-full">
+          <div class="flip-front bg-green-600 text-white p-6 rounded-2xl flex flex-col justify-center items-center text-center shadow-lg">
+            <div class="text-4xl mb-3">📱</div>
+            <h3 class="text-xl font-bold">Take your business on the go</h3>
+          </div>
+          <div class="flip-back bg-white text-gray-800 p-6 rounded-2xl flex flex-col justify-center items-center text-center border border-green-600 shadow-lg">
+            <p class="text-green-600 font-medium">Work on desktop, tablet, or mobile across all devices with full capabilities.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="flip-card w-full h-80">
+        <div class="flip-inner w-full h-full">
+          <div class="flip-front bg-yellow-500 text-white p-6 rounded-2xl flex flex-col justify-center items-center text-center shadow-lg">
+            <div class="text-4xl mb-3">🚀</div>
+            <h3 class="text-xl font-bold">Rapidly deploy and onboard</h3>
+          </div>
+          <div class="flip-back bg-white text-gray-800 p-6 rounded-2xl flex flex-col justify-center items-center text-center border border-yellow-500 shadow-lg">
+            <p class="text-yellow-600 font-medium">Start fast with role-based dashboards, training, and guided tours.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 4 -->
+      <div class="flip-card w-full h-80">
+        <div class="flip-inner w-full h-full">
+          <div class="flip-front bg-red-600 text-white p-6 rounded-2xl flex flex-col justify-center items-center text-center shadow-lg">
+            <div class="text-4xl mb-3">🌍</div>
+            <h3 class="text-xl font-bold">Available worldwide</h3>
+          </div>
+          <div class="flip-back bg-white text-gray-800 p-6 rounded-2xl flex flex-col justify-center items-center text-center border border-red-600 shadow-lg">
+            <p class="text-red-600 font-medium">Use in 47 languages and 160+ countries to grow globally.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 5 -->
+      <div class="flip-card w-full h-80">
+        <div class="flip-inner w-full h-full">
+          <div class="flip-front bg-emerald-600 text-white p-6 rounded-2xl flex flex-col justify-center items-center text-center shadow-lg">
+            <div class="text-4xl mb-3">🌱</div>
+            <h3 class="text-xl font-bold">Meet your sustainability goals</h3>
+          </div>
+          <div class="flip-back bg-white text-gray-800 p-6 rounded-2xl flex flex-col justify-center items-center text-center border border-emerald-600 shadow-lg">
+            <p class="text-emerald-600 font-medium">Track and report carbon emissions easily and accurately.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 6 -->
+      <div class="flip-card w-full h-80">
+        <div class="flip-inner w-full h-full">
+          <div class="flip-front bg-indigo-600 text-white p-6 rounded-2xl flex flex-col justify-center items-center text-center shadow-lg">
+            <div class="text-4xl mb-3">🧩</div>
+            <h3 class="text-xl font-bold">Customize with prebuilt apps</h3>
+          </div>
+          <div class="flip-back bg-white text-gray-800 p-6 rounded-2xl flex flex-col justify-center items-center text-center border border-indigo-600 shadow-lg">
+            <p class="text-indigo-600 font-medium">Extend with industry-specific apps for unique needs.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 7 -->
+      <div class="flip-card w-full h-80">
+        <div class="flip-inner w-full h-full">
+          <div class="flip-front bg-purple-600 text-white p-6 rounded-2xl flex flex-col justify-center items-center text-center shadow-lg">
+            <div class="text-4xl mb-3">🤝</div>
+            <h3 class="text-xl font-bold">Collaborate in Microsoft Teams</h3>
+          </div>
+          <div class="flip-back bg-white text-gray-800 p-6 rounded-2xl flex flex-col justify-center items-center text-center border border-purple-600 shadow-lg">
+            <p class="text-purple-600 font-medium">Share Business Central data in Teams with a Microsoft 365 license.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 8 -->
+      <div class="flip-card w-full h-80">
+        <div class="flip-inner w-full h-full">
+          <div class="flip-front bg-pink-600 text-white p-6 rounded-2xl flex flex-col justify-center items-center text-center shadow-lg">
+            <div class="text-4xl mb-3">⚙️</div>
+            <h3 class="text-xl font-bold">Streamline with workflows</h3>
+          </div>
+          <div class="flip-back bg-white text-gray-800 p-6 rounded-2xl flex flex-col justify-center items-center text-center border border-pink-600 shadow-lg">
+            <p class="text-pink-600 font-medium">Use built-in templates or create your own with Power Automate.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 9 -->
+      <div class="flip-card w-full h-80">
+        <div class="flip-inner w-full h-full">
+          <div class="flip-front bg-cyan-600 text-white p-6 rounded-2xl flex flex-col justify-center items-center text-center shadow-lg">
+            <div class="text-4xl mb-3">🔗</div>
+            <h3 class="text-xl font-bold">Connect with existing systems</h3>
+          </div>
+          <div class="flip-back bg-white text-gray-800 p-6 rounded-2xl flex flex-col justify-center items-center text-center border border-cyan-600 shadow-lg">
+            <p class="text-cyan-600 font-medium">Integrate seamlessly with payroll and third-party systems.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+  <!-- Implementation Methodology -->
+  <section class="bg-gray-50 py-20 px-4">
+    <div class="max-w-7xl mx-auto cursor-pointer">
+      <h2 class="text-4xl font-bold text-center mb-12">Our Proven Microsoft Dynamics 365 ERP Implementation Methodology</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl hover:bg-blue-600 hover:text-white transition-all duration-500 border-t-4 border-blue-600 text-center">
+          <div class="text-5xl mb-4">🔍</div>
+          <h3 class="text-xl font-bold mb-2">Business Process Understanding</h3>
+          <p class="text-sm">We begin by understanding your unique business needs to align implementation goals.</p>
+        </div>
+        <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl hover:bg-blue-600 hover:text-white transition-all duration-500 border-t-4 border-green-600 text-center">
+          <div class="text-5xl mb-4">📋</div>
+          <h3 class="text-xl font-bold mb-2">Strategic Planning</h3>
+          <p class="text-sm">We craft a tailored plan with the right tools for seamless integration and growth.</p>
+        </div>
+        <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl hover:bg-blue-600 hover:text-white transition-all duration-500 border-t-4 border-indigo-600 text-center">
+          <div class="text-5xl mb-4">⚙️</div>
+          <h3 class="text-xl font-bold mb-2">Implementation</h3>
+          <p class="text-sm">We handle full setup, configuration, and deployment for optimized operations.</p>
+        </div>
+        <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl hover:bg-blue-600 hover:text-white transition-all duration-500 border-t-4 border-purple-600 text-center">
+          <div class="text-5xl mb-4">🚀</div>
+          <h3 class="text-xl font-bold mb-2">Go-live and Support</h3>
+          <p class="text-sm">We ensure a smooth go-live and provide ongoing support and upgrades as needed.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Upgrade Section -->
+  <section class="py-16 px-6 max-w-6xl mx-auto">
+    <div class="bg-white shadow-xl rounded-2xl p-10">
+      <h2 class="text-4xl font-bold mb-6">Upgrade from Microsoft Dynamics NAV to Business Central</h2>
+      <p class="mb-4">Moving from legacy NAV to Business Central ensures a modern, cloud-based ERP experience with AI, automation, and security advantages. Gohra Technologies simplifies this upgrade process for you.</p>
+      <h3 class="text-2xl font-semibold mt-6 mb-4">Why Upgrade?</h3>
+      <ul class="list-disc list-inside space-y-2">
+        <li><strong>Improved accessibility:</strong> Access from anywhere with cloud hosting.</li>
+        <li><strong>Better decisions:</strong> Built-in analytics and insights.</li>
+        <li><strong>Security and compliance:</strong> Meets modern global regulations.</li>
+        <li><strong>Microsoft 365 integration:</strong> Seamless collaboration tools.</li>
+        <li><strong>Cost savings:</strong> No on-prem hardware or maintenance.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Help Section -->
+  <section class="bg-blue-800 text-white py-16 px-6 text-center">
+    <h2 class="text-4xl font-bold mb-4">How Gohra Technologies Helps</h2>
+    <p class="max-w-4xl mx-auto text-lg">We start with understanding your business needs and deliver solutions that enhance efficiency and scalability through Business Central.</p>
+    <div class="mt-8">
+      <a href="#" class="inline-block bg-white text-blue-800 font-semibold px-8 py-3 rounded-full shadow hover:bg-gray-200 transition">Contact Us</a>
+    </div>
+  </section>
+
+</body>
+</html>

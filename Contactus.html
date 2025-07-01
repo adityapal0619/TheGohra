@@ -3,25 +3,48 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact Us | Gohra Technology</title>
+  <title>Contact Us - Ghora</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
+
+  <style type="text/tailwindcss">
+    @layer utilities {
+      @keyframes scale-fade {
+        0% {
+          transform: scale(0.95);
+          opacity: 0;
+        }
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+
+      @keyframes pulse-glow {
+        0%, 100% {
+          box-shadow: 0 0 0px #0087ff70;
+        }
+        50% {
+          box-shadow: 0 0 25px #0087ff70;
+        }
+      }
+
+      .animate-box {
+        animation: scale-fade 0.5s ease-out forwards, pulse-glow 2.5s ease-in-out infinite;
+      }
     }
-    .floating-label input:focus ~ label,
-    .floating-label input:not(:placeholder-shown) ~ label,
-    .floating-label textarea:focus ~ label,
-    .floating-label textarea:not(:placeholder-shown) ~ label {
-      transform: translateY(-1.5rem) scale(0.85);
-      color: #0087ff;
+
+    body {
+      font-family: sans-serif;
     }
   </style>
 </head>
-<body class="bg-white text-gray-800">
-    <nav class="border-b border-blue-600 px-4 py-3 md:px-8 bg-white shadow-sm">
+<body class="font-sans">
+
+  <!-- Header -->
+   <nav class="border-b  px-4 py-3 md:px-8 bg-white shadow-sm">
     <div class="flex items-center justify-between">
       <!-- Logo Section -->
       <div class="flex items-center space-x-3">
@@ -29,18 +52,18 @@
       </div>
 
       <!-- Desktop Menu -->
-      <ul class="hidden md:flex items-center space-x-6 text-blue-600 font-medium">
-        <li><a href="index.html" class="hover:underline">Home</a></li>
-        <li><a href="AboutUs.html" class="hover:underline">About Us</a></li>
-        <li><a href="#" class="hover:underline">Our Partners</a></li>
-        <li><a href="#" class="hover:underline">What we do</a></li>
-        <li><a href="Career.html" class="hover:underline">Career</a></li>
-        <li><a href="#" class="hover:underline">Resources</a></li>
+      <ul class="hidden md:flex items-center space-x-6 text-black-600 font-medium">
+        <li><a href="index.html" class="hover:underline" id="navbhar" >Home</a></li>
+        <li><a href="AboutUs.html" class="hover:underline" id="navbhar">About Us</a></li>
+        <li><a href="#" class="hover:underline" id="navbhar">Our Partners</a></li>
+        <li><a href="#" class="hover:underline" id="navbhar">What we do</a></li>
+        <li><a href="Career.html" class="hover:underline" id="navbhar">Career</a></li>
+        <li><a href="#" class="hover:underline" id="navbhar">Resources</a></li>
       </ul>
 
       <!-- Contact & Microsoft -->
       <div class="hidden md:flex items-center space-x-4">
-        <a href="Contactus.html" class="border border-blue-600 text-blue-600 px-4 py-2 rounded font-semibold hover:bg-blue-300">CONTACT US</a>
+        <a href="Contactus.html" class="border border-blue-600 text-white bg-blue-600 px-4 py-2 rounded font-semibold " id="contactus">Connect with Us</a>
         <div class="flex items-center space-x-1">
           <img src="https://img.icons8.com/color/48/000000/microsoft.png" class="h-6 w-6" alt="MS" />
           <span class="text-sm text-gray-600">Microsoft<br>Solutions Partner</span>
@@ -69,61 +92,129 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="relative bg-cover bg-center h-[60vh]" style="background-image: url('Photos/Contactus.jpg');">
-    <div class="absolute inset-0 bg-black/50 flex items-center justify-center">
-      <div class="text-center text-white px-4">
-        <h1 class="text-5xl font-bold mb-4" data-aos="fade-up">Get in Touch</h1>
-        <p class="text-xl" data-aos="fade-up" data-aos-delay="100">We'd love to hear from you — Let's build something great together.</p>
-      </div>
-    </div>
-  </section>
+  <!-- Contact Section -->
+  <section class="py-16 text-gray-900">
+    <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-start">
 
-  <!-- Contact Form Section -->
-  <section class="py-20 px-6 max-w-6xl mx-auto">
-    <div class="grid md:grid-cols-2 gap-12 items-center">
-      
-      <!-- Form -->
-      <div data-aos="fade-right">
-        <h2 class="text-3xl font-bold mb-6">Send Us a Message</h2>
-        <form class="space-y-6">
-          <div class="floating-label relative">
-            <input type="text" id="name" placeholder=" " required class="w-full border-b-2 border-gray-300 focus:outline-none focus:border-blue-600 py-2 peer" />
-            <label for="name" class="absolute left-0 top-2 text-gray-600 transition-all duration-300 peer-focus:text-blue-600">Your Name</label>
-          </div>
-
-          <div class="floating-label relative">
-            <input type="email" id="email" placeholder=" " required class="w-full border-b-2 border-gray-300 focus:outline-none focus:border-blue-600 py-2 peer" />
-            <label for="email" class="absolute left-0 top-2 text-gray-600 transition-all duration-300 peer-focus:text-blue-600">Your Email</label>
-          </div>
-
-          <div class="floating-label relative">
-            <textarea id="message" rows="4" placeholder=" " required class="w-full border-b-2 border-gray-300 focus:outline-none focus:border-blue-600 py-2 peer resize-none"></textarea>
-            <label for="message" class="absolute left-0 top-2 text-gray-600 transition-all duration-300 peer-focus:text-blue-600">Your Message</label>
-          </div>
-
-          <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full transition duration-300">
-            Send Message
-          </button>
-        </form>
+      <!-- Left Side Text -->
+      <div>
+        <h2 class="text-5xl font-bold mb-6">Ignite the Conversation!</h2>
+        <p class="text-xl mb-6">
+          Whether you’re ready to see a demo, have a question, or want to learn more about how we can help your business, we’re here for you! Fill out the form below, and we’ll get back to you in no time.
+        </p>
+        <p class="text-xl font-semibold mb-2">Need Help Fast?</p>
+        <p class="text-xl mb-6">
+          Looking for immediate assistance? Give us a call or drop us an email. We’re always happy to help!
+        </p>
+        <h3 class="text-2xl font-bold mb-2">Request a Demo</h3>
+        <p class="text-xl mb-6">
+          See how our solutions can work for your business. Request a personalized demo today!
+        </p>
+        <h3 class="text-2xl font-bold mb-2 ">Get in Touch</h3>
+        <p class="text-xl mb-6">
+          Have an enquiry? We’re here to answer your questions. Just reach out and let’s talk.
+        </p>
+         <h3 class="text-2xl font-bold mb-2">Let’s Collaborate</h3>
+        <p class="text-xl mb-6">
+         Ready to take your business to the next level? Let’s explore how we can work together and create innovative solutions.
+        </p>
       </div>
 
-      <!-- Contact Details -->
-      <div data-aos="fade-left">
-        <h3 class="text-2xl font-semibold mb-4">Contact Details</h3>
-        <ul class="space-y-4 text-lg">
-          <li><strong>Email:</strong> info@gohra.tech</li>
-          <li><strong>Phone:</strong> +91-98765-43210</li>
-          <li><strong>Location:</strong> Noida, Uttar Pradesh, India</li>
-        </ul>
-        <div class="mt-8">
-          <iframe class="rounded-lg w-full h-64 shadow" src="https://maps.google.com/maps?q=noida%20india&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"></iframe>
+      <!-- Right Side Animated Form Box -->
+      <div class="bg-[#0087ff] p-4 sm:p-6 md:p-8 rounded-sm shadow-lg animate-box">
+        <div class="bg-white p-6 sm:p-10 rounded-sm">
+          <h2 class="text-4xl font-bold mb-2 text-black">Contact us</h2>
+          <p class="text-xl text-black mb-6">We want to hear from you</p>
+
+          <form class="space-y-6">
+            <div>
+              <label class="block font-medium text-lg text-gray-800 mb-1">Name</label>
+              <input type="text" placeholder="Your full name" class="w-full px-4 py-3 bg-gray-100 rounded-md outline-none" />
+            </div>
+            <div>
+              <label class="block font-medium text-lg text-gray-800 mb-1">Email</label>
+              <input type="email" placeholder="Your email address" class="w-full px-4 py-3 bg-gray-100 rounded-md outline-none" />
+            </div>
+            <div>
+              <label class="block font-medium text-lg text-gray-800 mb-1">Phone</label>
+              <input type="tel" placeholder="Phone" class="w-full px-4 py-3 bg-gray-100 rounded-md outline-none" />
+            </div>
+            <div>
+              <label class="block font-medium text-lg text-gray-800 mb-1">Subject</label>
+              <input type="text" placeholder="Demo, enquiry, or partnership" class="w-full px-4 py-3 bg-gray-100 rounded-md outline-none" />
+            </div>
+            <div>
+              <label class="block font-medium text-lg text-gray-800 mb-1">Message</label>
+              <input type="text" placeholder="Tell us more about what you’re looking for" class="w-full px-4 py-3 bg-gray-100 rounded-md outline-none" />
+            </div>
+            <button type="submit" class="w-full bg-[#0087ff] text-white text-lg py-3 rounded-md hover:bg-blue-700 transition">
+              Submit
+            </button>
+          </form>
         </div>
       </div>
 
     </div>
   </section>
 
+  <!-- Locations -->
+   <section class="py-16 bg-white text-gray-900">
+  <div class="max-w-7xl mx-auto px-4">
+    <h2 class="text-3xl font-bold mb-10">Locations</h2>
+
+    <div class="grid md:grid-cols-2 gap-8">
+      <!-- Head Office -->
+      <div class="bg-white p-6 rounded-xl shadow-md flex space-x-4">
+        <div>
+          <img src="https://img.icons8.com/fluency/48/marker.png" class="h-8 w-8 mt-1" alt="Location Icon" />
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold mb-1">Head Office:</h3>
+          <p class="text-lg leading-relaxed">
+            HD-024, WeWork DLF Two Horizon Centre, 5th Floor,<br>
+            Sector 43, Gurugram, Haryana, India 122002
+          </p>
+        </div>
+      </div>
+
+      <!-- Other Offices -->
+      <div class="bg-white p-6 rounded-xl shadow-md flex space-x-4">
+        <div>
+          <img src="https://img.icons8.com/fluency/48/marker.png" class="h-8 w-8 mt-1" alt="Location Icon" />
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold mb-1">Other Offices:</h3>
+          <p class="text-lg"><strong>India:</strong> Kolkata | Bengaluru | Mumbai</p>
+          <p class="text-lg"><strong>International:</strong> Dubai | Toronto</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  <!-- Ghora Logo at Bottom Left -->
+<section class="relative bg-black text-white overflow-hidden py-16 mb-6">
+  <!-- Wave SVG Bottom -->
+  <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none rotate-180 z-0">
+    <svg viewBox="0 0 1200 120" preserveAspectRatio="none" class="w-full h-16 fill-black">
+      <path d="M321.39,56.44C194.62,65.58,96.56,40.33,0,0V120H1200V0C1076.96,73.41,933.27,99.39,789.53,92.3,647.26,85.3,558.08,23.19,421.22,30.21,384.87,32.1,354.07,51.88,321.39,56.44Z"/>
+    </svg>
+  </div>
+
+  <!-- Content -->
+  <div class="relative z-10 max-w-7xl mx-auto px-4 flex flex-col items-center justify-center text-center" data-aos="fade-up">
+    <h2 class="text-4xl md:text-5xl font-bold mb-4 leading-tight">
+      Don’t wait—<span class="text-[#0087ff]">reach out now!</span>
+    </h2>
+    <p class="text-lg text-white/90 mb-8 max-w-2xl">
+      We look forward to connecting with you and discovering how we can support your goals.
+    </p>
+    <a href="Contactus.html"
+      class="inline-block bg-[#0087ff] hover:bg-blue-600 text-white font-semibold px-8 py-3 rounded-md transition duration-300 shadow-lg"
+      data-aos="zoom-in">
+      Contact us
+    </a>
+  </div>
+</section>
   <!-- Footer -->
 </section>
 <footer class="bg-black text-white py-10 px-6 md:px-16">
@@ -184,7 +275,11 @@
     &copy; 2025 Gohra Technology. All rights reserved.
   </div>
 </footer>
-  <script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+   <script>
     // Toggle mobile menu
     const menuBtn = document.getElementById("menuBtn");
     const mobileMenu = document.getElementById("mobileMenu");
@@ -192,12 +287,7 @@
     menuBtn.addEventListener("click", () => {
       mobileMenu.classList.toggle("hidden");
     });
-    AOS.init({
-      duration: 1000,
-      once: true
-    });
   </script>
 
-  <!-- Init AOS -->
 </body>
 </html>

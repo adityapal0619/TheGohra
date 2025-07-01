@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Microsoft Dynamics 365 | Gohra Technologies</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .flip-inner {
+      transition: transform 0.8s ease;
+      transform-style: preserve-3d;
+      position: relative;
+    }
+    .flip-card:hover .flip-inner {
+      transform: rotateY(180deg);
+    }
+    .flip-front, .flip-back {
+      backface-visibility: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 1rem;
+    }
+    .flip-back {
+      transform: rotateY(180deg);
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+<!-- Mega Navigation Bar with Tailwind CSS -->
+<nav class="border-b px-4 py-3 md:px-8 bg-white shadow-sm relative z-50">
+  <div class="flex items-center justify-between">
+    <!-- Logo -->
+    <div class="flex items-center space-x-3">
+      <img src="Photos/logo.png" alt="Logo" class="h-11 w-30">
+    </div>
+
+    <!-- Desktop Menu -->
+    <ul class="hidden md:flex items-center space-x-6 text-black font-medium">
+      <li><a href="index.html" class="hover:text-blue-600">Home</a></li>
+      <li><a href="AboutUs.html" class="hover:text-blue-600">About Us</a></li>
+      <li><a href="#" class="hover:text-blue-600">Our Partners</a></li>
+
+      <!-- Mega Menu -->
+      <li class="relative group">
+        <button class="hover:text-blue-600 focus:outline-none">Service & Solutions</button>
+        <div class="fixed left-0 top-[70px] mt-3 hidden group-hover:flex bg-black text-white p-8 rounded-lg shadow-xl w-full z-50">
+          <div class="grid grid-cols-3 gap-8 w-full max-w-7xl mx-auto">
+
+            <!-- Column 1 -->
+            <div>
+              <ul class="space-y-1">
+                <li><a href="d365f&o.html" class="hover:underline">Microsoft Dynamics 365 Finance and Operations</a></li>
+                <li><a href="d365central.html" class="hover:underline">Microsoft Dynamics 365 Business Central</a></li>
+                <li><a href="PowerBI.html" class="hover:underline">Power Platform</a></li>
+              </ul>
+            </div>
+
+            <!-- Column 2 -->
+            <div>
+              <ul class="space-y-1">
+                <li><a href="ResourceAugmentation.html" class="hover:underline">Resource Augmentation</a></li>
+              </ul>
+            </div>
+
+            <!-- Column 3 -->
+            <div>
+              <ul class="space-y-1">
+                <li><a href="#" class="hover:underline">Gohra Assist</a></li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </li>
+      <li><a href="Career.html" class="hover:text-blue-600">Career</a></li>
+      <li><a href="#" class="hover:text-blue-600">Resources</a></li>
+    </ul>
+
+    <!-- Contact & MS Badge -->
+    <div class="hidden md:flex items-center space-x-4">
+      <a href="Contactus.html" class="border border-blue-600 text-white bg-blue-600 px-4 py-2 rounded font-semibold hover:bg-blue-700">Connect with Us</a>
+      <div class="flex items-center space-x-1">
+        <img src="https://img.icons8.com/color/48/000000/microsoft.png" class="h-6 w-6" alt="MS">
+        <span class="text-sm text-gray-600 leading-tight">Microsoft<br>Solutions Partner</span>
+      </div>
+    </div>
+
+    <!-- Hamburger Icon -->
+    <button id="menuBtn" class="md:hidden text-blue-600 focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="mt-3 hidden md:hidden bg-white space-y-2 px-2 pb-4 text-blue-600 font-medium">
+    <a href="#" class="block hover:bg-blue-50 px-2 py-1 rounded">Software</a>
+    <a href="#" class="block hover:bg-blue-50 px-2 py-1 rounded">Service</a>
+    <a href="#" class="block hover:bg-blue-50 px-2 py-1 rounded">Industries</a>
+    <a href="#" class="block hover:bg-blue-50 px-2 py-1 rounded">Partner</a>
+    <a href="#" class="block hover:bg-blue-50 px-2 py-1 rounded">About</a>
+    <a href="#" class="block hover:bg-blue-50 px-2 py-1 rounded">Resources</a>
+    <a href="Contactus.html" class="block border border-blue-600 text-center px-4 py-2 rounded font-semibold hover:bg-blue-50">CONTACT US</a>
+  </div>
+</nav>
+
+<script>
+  // Optional: Add click event to keep dropdown open on click if needed
+  document.querySelectorAll('nav li.group > button').forEach(button => {
+    button.addEventListener('click', (e) => {
+      const dropdown = button.nextElementSibling;
+      dropdown.classList.toggle('hidden');
+    });
+  });
+</script>
+
+  <!-- Hero Section -->
+  <section class="bg-blue-800 text-white py-16 px-4 text-center fade-up delay-1">
+    <h1 class="text-5xl font-bold mb-4">Microsoft Dynamics 365 Finance and Operations</h1>
+    <p class="text-lg max-w-3xl mx-auto">Maximize financial visibility and profitability using D365 Finance and Operations ERP</p>
+  </section>
+
+  <!-- What is D365 F&O -->
+  <section class="py-16 px-6 max-w-6xl mx-auto fade-up delay-2">
+    <div class="bg-white shadow-xl rounded-2xl p-10">
+      <h2 class="text-3xl font-semibold mb-6">What is Microsoft Dynamics 365 Finance and Operations?</h2>
+      <p class="mb-4">Dynamics 365 Finance and Operations is a cloud-based ERP system designed for large or diversified companies. It enables effective financial and inventory management through its integrated apps:</p>
+      <ul class="list-disc list-inside mb-4">
+        <li><strong>Dynamics 365 Finance:</strong> Budgeting, project management, financials, and accounting.</li>
+        <li><strong>Dynamics 365 Supply Chain Management:</strong> Engineering, manufacturing, warehousing, and distribution.</li>
+      </ul>
+      <p class="mb-4">It delivers a comprehensive ERP experience for managing all business processes in a unified cloud environment.</p>
+      <h1>Gohra Technologies specializes in successful Microsoft D365 implementations that truly deliver results.</h1>
+    </div>
+  </section>
+
+  <!-- Feature Tiles -->
+<section class="bg-gray-100 py-20 px-4">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="text-4xl font-bold text-center mb-12">
+      Microsoft Dynamics 365 Finance and Operations Features
+    </h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 cursor-pointer">
+
+      <!-- Card 1 -->
+      <div class="flip-card w-full h-80">
+        <div class="flip-inner w-full h-full">
+          <div class="flip-front bg-blue-600 text-white p-6 rounded-2xl flex flex-col justify-center items-center text-center shadow-lg">
+            <div class="text-4xl mb-3">📊</div>
+            <h3 class="text-xl font-bold">Financial Planning & Analysis</h3>
+          </div>
+          <div class="flip-back bg-white text-gray-800 p-6 rounded-2xl flex flex-col justify-center items-center text-center border border-blue-600 shadow-lg">
+            <h4 class="text-blue-600 font-semibold text-lg mb-2">Enhance agility with financial planning, budgeting, and forecasting using Copilot within business performance management capabilities.</h4>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="flip-card w-full h-80">
+        <div class="flip-inner w-full h-full">
+          <div class="flip-front bg-green-600 text-white p-6 rounded-2xl flex flex-col justify-center items-center text-center shadow-lg">
+            <div class="text-4xl mb-3">📑</div>
+            <h3 class="text-xl font-bold">Accounting & Financial Close</h3>
+          </div>
+          <div class="flip-back bg-white text-gray-800 p-6 rounded-2xl flex flex-col justify-center items-center text-center border border-green-600 shadow-lg">
+            <h4 class="text-green-600 font-semibold text-lg mb-2">Expedite financial close and reporting with self-serve analytics and automation.</h4>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="flip-card w-full h-80">
+        <div class="flip-inner w-full h-full">
+          <div class="flip-front bg-pink-600 text-white p-6 rounded-2xl flex flex-col justify-center items-center text-center shadow-lg">
+            <div class="text-4xl mb-3">💰</div>
+            <h3 class="text-xl font-bold">Tax Management</h3>
+          </div>
+          <div class="flip-back bg-white text-gray-800 p-6 rounded-2xl flex flex-col justify-center items-center text-center border border-pink-600 shadow-lg">
+            <h4 class="text-pink-600 font-semibold text-lg mb-2">Manage tax jurisdictions, rates, and deductibility based on a unified tax data model.</h4>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="flip-card w-full h-80">
+        <div class="flip-inner w-full h-full">
+          <div class="flip-front bg-indigo-600 text-white p-6 rounded-2xl flex flex-col justify-center items-center text-center shadow-lg">
+            <div class="text-4xl mb-3">🔁</div>
+            <h3 class="text-xl font-bold">Quote to Cash</h3>
+          </div>
+          <div class="flip-back bg-white text-gray-800 p-6 rounded-2xl flex flex-col justify-center items-center text-center border border-indigo-600 shadow-lg">
+            <h4 class="text-indigo-600 font-semibold text-lg mb-2">Optimize monetization with AI-powered billing, accounts receivable (AR), collections, and more.</h4>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="flip-card w-full h-80">
+        <div class="flip-inner w-full h-full">
+          <div class="flip-front bg-yellow-500 text-white p-6 rounded-2xl flex flex-col justify-center items-center text-center shadow-lg">
+            <div class="text-4xl mb-3">💼</div>
+            <h3 class="text-xl font-bold">Cash Management</h3>
+          </div>
+          <div class="flip-back bg-white text-gray-800 p-6 rounded-2xl flex flex-col justify-center items-center text-center border border-yellow-500 shadow-lg">
+            <h4 class="text-yellow-600 font-semibold text-lg mb-2">Proactively manage liquidity with predictive analytics and cash-flow forecasting.</h4>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="flip-card w-full h-80">
+        <div class="flip-inner w-full h-full">
+          <div class="flip-front bg-purple-600 text-white p-6 rounded-2xl flex flex-col justify-center items-center text-center shadow-lg">
+            <div class="text-4xl mb-3">📈</div>
+            <h3 class="text-xl font-bold">Business Performance</h3>
+          </div>
+          <div class="flip-back bg-white text-gray-800 p-6 rounded-2xl flex flex-col justify-center items-center text-center border border-purple-600 shadow-lg">
+            <h4 class="text-purple-600 font-semibold text-lg mb-2">Enhance decision making and agility with Copilot-assisted self-service financial and operational analytics.</h4>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+ <!-- Implementation Methodology Section -->
+<section class="bg-gray-50 py-20 px-4">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="text-4xl font-bold text-center mb-12">
+      Our Proven Microsoft Dynamics 365 ERP Implementation Methodology
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+      <!-- Step 1 -->
+      <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl hover:bg-blue-600 hover:text-white transition-all duration-500 border-t-4 border-blue-600 text-center cursor-pointer">
+        <div class="text-5xl mb-4 text-blue-600 group-hover:text-white transition-colors">🔍</div>
+        <h3 class="text-xl font-bold mb-2">Business Process Understanding</h3>
+        <p class="text-sm">
+          We begin by understanding your unique business needs, ensuring that the Microsoft Dynamics 365 implementation is aligned with your goals.
+        </p>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl hover:bg-blue-600 hover:text-white transition-all duration-500 border-t-4 border-green-600 text-center cursor-pointer">
+        <div class="text-5xl mb-4 text-green-600 group-hover:text-white transition-colors">🧠</div>
+        <h3 class="text-xl font-bold mb-2">Strategic Planning</h3>
+        <p class="text-sm">
+          Our team develops a tailored plan, selecting the right solutions and methodologies to ensure smooth integration and long-term success.
+        </p>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl hover:bg-blue-600 hover:text-white transition-all duration-500 border-t-4 border-indigo-600 text-center cursor-pointer">
+        <div class="text-5xl mb-4 text-indigo-600 group-hover:text-white transition-colors">⚙️</div>
+        <h3 class="text-xl font-bold mb-2">Implementation</h3>
+        <p class="text-sm">
+          We manage the entire implementation process, from configuration to deployment, ensuring the system is set up to optimize your business operations.
+        </p>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl hover:bg-blue-600 hover:text-white transition-all duration-500 border-t-4 border-purple-600 text-center cursor-pointer">
+        <div class="text-5xl mb-4 text-purple-600 group-hover:text-white transition-colors">🚀</div>
+        <h3 class="text-xl font-bold mb-2">Go-live and Support</h3>
+        <p class="text-sm">
+          Successfully deploy the solution and after deployment, we provide continuous support and maintenance, addressing any concerns promptly and adapting the system as your business evolves.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+  <!-- Upgrade Section -->
+  <section class="py-16 px-6 max-w-6xl mx-auto fade-up delay-5">
+    <div class="bg-white shadow-xl rounded-2xl p-10">
+      <h2 class="text-4xl font-bold mb-6">Upgrade from Microsoft AX 2012 to Dynamics 365 Finance and Operations</h2>
+      <p class="mb-4">Upgrading from Microsoft AX 2012 can be complex without the right strategy. Gohra Technologies ensures a smooth and future-ready migration to D365 F&O.</p>
+      <h3 class="text-2xl font-semibold mt-8 mb-4">Why Upgrade?</h3>
+      <ul class="list-disc list-inside space-y-2">
+        <li><strong>Cloud Deployment:</strong> Accessible anywhere with improved business continuity.</li>
+        <li><strong>Enhanced UX:</strong> Modern, intuitive UI and personalization options.</li>
+        <li><strong>Improved Functionality:</strong> Simplified financial operations backed by insights.</li>
+        <li><strong>Seamless Integration:</strong> Compatible with Power BI, Microsoft 365, and third-party tools.</li>
+        <li><strong>Automatic Updates:</strong> Biannual upgrades with no business disruption.</li>
+        <li><strong>Advanced Security:</strong> Secured by Microsoft Azure to mitigate cyber threats.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Help Section -->
+  <section class="bg-blue-800 text-white py-16 px-6 text-center fade-up delay-6">
+    <h2 class="text-4xl font-bold mb-4">How Gohra Technologies Helps</h2>
+    <p class="max-w-4xl mx-auto text-lg">We begin by understanding your needs, anticipate future demands, and implement strategic upgrades for greater efficiency and growth.</p>
+    <div class="mt-8">
+      <a href="#" class="inline-block bg-white text-blue-800 font-semibold px-8 py-3 rounded-full shadow hover:bg-gray-200 transition">Contact Us</a>
+    </div>
+  </section>
+
+</body>
+</html>
