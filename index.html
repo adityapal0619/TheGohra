@@ -25,8 +25,6 @@
     <ul class="hidden md:flex items-center space-x-6 text-black font-medium">
       <li><a href="index.html" class="hover:text-blue-600">Home</a></li>
       <li><a href="AboutUs.html" class="hover:text-blue-600">About Us</a></li>
-      <li><a href="#" class="hover:text-blue-600">Our Partners</a></li>
-
       <!-- Mega Menu -->
       <li class="relative group">
         <button class="hover:text-blue-600 focus:outline-none">Service & Solutions</button>
@@ -59,8 +57,8 @@
           </div>
         </div>
       </li>
+       <li><a href="#" class="hover:text-blue-600">Our Partners</a></li>
       <li><a href="Career.html" class="hover:text-blue-600">Career</a></li>
-      <li><a href="#" class="hover:text-blue-600">Resources</a></li>
     </ul>
 
     <!-- Contact & MS Badge -->
@@ -193,7 +191,7 @@
   </div>
 </section>
 <!-- Gohra D365 Section -->
- <section class="bg-[#1976D2] py-16">
+<section class="bg-[#1976D2] py-16">
   <div class="max-w-7xl mx-auto px-4">
     <h2 class="text-4xl font-bold text-white text-center mb-4">
       A Full-service Microsoft Solutions Provider
@@ -203,31 +201,39 @@
     </p>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-      
-      <!-- Card 1 -->
-      <div class="flip-card w-full h-69">
+
+      <!-- CARD TEMPLATE -->
+      <div class="flip-card w-full h-64">
         <div class="flip-card-inner w-full h-full">
-          <div class="flip-card-front bg-white rounded-xl shadow-lg p-6 text-center">
-            <img src="Photos/maintenance.png" class="w-12 mx-auto mb-4" />
-            <h3 class="text-xl font-semibold">Business Process Review</h3>
-            <h5 class="text-x1 font-seimibold">We analyze your business processes and align them with D365 to drive smarter operations</h5>
-            <div class="text-2xl mt-4">→</div>
+          <div class="flip-card-front bg-white rounded-xl shadow-lg p-6 flex flex-col justify-between text-center h-full">
+            <div>
+              <img src="Photos/maintenance.png" class="w-12 mx-auto mb-4" />
+              <h3 class="text-xl font-semibold">Business Process Review</h3>
+              <p class="text-sm font-semibold mt-2 min-h-[100px]">
+                We analyze your business processes and align them with D365 to drive smarter operations
+              </p>
+            </div>
+            <div class="text-2xl">→</div>
           </div>
-          <div class="flip-card-back bg-[white] rounded-xl text-black p-6 text-center flex flex-col justify-center">
+          <div class="flip-card-back bg-white text-black rounded-xl p-6 flex flex-col justify-center text-center">
             <h3 class="text-xl font-bold mb-2">Let’s Align Tech with How You Actually Work</h3>
             <p class="text-sm">We map your real-world workflows to D365 for smarter, smoother business.</p>
           </div>
         </div>
       </div>
 
-      <!-- Card 2 -->
+      <!-- Repeat for the remaining 7 cards -->
       <div class="flip-card w-full h-64">
         <div class="flip-card-inner w-full h-full">
-          <div class="flip-card-front bg-white rounded-xl shadow-lg p-6 text-center">
-            <img src="Photos/rocket.png" class="w-12 mx-auto mb-4" />
-            <h3 class="text-xl font-semibold">Implementation</h3>
-            <h5 class="text-1 font-seimibold">End-to-end Dynamics 365 implementation — seamless, structured, and tailored to your needs</h5>
-            <div class="text-2xl mt-4">→</div>
+          <div class="flip-card-front bg-white rounded-xl shadow-lg p-6 flex flex-col justify-between text-center h-full">
+            <div>
+              <img src="Photos/rocket.png" class="w-12 mx-auto mb-4" />
+              <h3 class="text-xl font-semibold">Implementation</h3>
+              <p class="text-sm font-semibold mt-2 min-h-[100px]">
+                End-to-end Dynamics 365 implementation — seamless, structured, and tailored to your needs
+              </p>
+            </div>
+            <div class="text-2xl">→</div>
           </div>
           <div class="flip-card-back bg-[#0087ff] rounded-xl text-white p-6 text-center flex flex-col justify-center">
             <h3 class="text-xl font-bold mb-2">From Kickoff to Go-Live, We’ve Got It Covered</h3>
@@ -236,14 +242,17 @@
         </div>
       </div>
 
-      <!-- Card 3 -->
       <div class="flip-card w-full h-64">
         <div class="flip-card-inner w-full h-full">
-          <div class="flip-card-front bg-white rounded-xl shadow-lg p-6 text-center">
-            <img src="Photos/customer-service.png" class="w-12 mx-auto mb-4" />
-            <h3 class="text-xl font-semibold">Support</h3>
-            <h5 class="text-x1 font-seimibold">Ongoing D365 support that actually supports — fast, reliable, and always available</h5>
-            <div class="text-2xl mt-4">→</div>
+          <div class="flip-card-front bg-white rounded-xl shadow-lg p-6 flex flex-col justify-between text-center h-full">
+            <div>
+              <img src="Photos/customer-service.png" class="w-12 mx-auto mb-4" />
+              <h3 class="text-xl font-semibold">Support</h3>
+              <p class="text-sm font-semibold mt-2 min-h-[100px]">
+                Ongoing D365 support that actually supports — fast, reliable, and always available
+              </p>
+            </div>
+            <div class="text-2xl">→</div>
           </div>
           <div class="flip-card-back bg-[#0087ff] rounded-xl text-white p-6 text-center flex flex-col justify-center">
             <h3 class="text-xl font-bold mb-2">Support That Shows Up — Every Time</h3>
@@ -252,14 +261,17 @@
         </div>
       </div>
 
-      <!-- Card 4 -->
       <div class="flip-card w-full h-64">
         <div class="flip-card-inner w-full h-full">
-          <div class="flip-card-front bg-white rounded-xl shadow-lg p-6 text-center">
-            <img src="Photos/uploading.png" class="w-12 mx-auto mb-4" />
-            <h3 class="text-xl font-semibold">Upgrade</h3>
-            <h5 class="text-x1 font-seimibold">Upgrade your Dynamics 365 system without the downtime or drama</h5>
-            <div class="text-2xl mt-4">→</div>
+          <div class="flip-card-front bg-white rounded-xl shadow-lg p-6 flex flex-col justify-between text-center h-full">
+            <div>
+              <img src="Photos/uploading.png" class="w-12 mx-auto mb-4" />
+              <h3 class="text-xl font-semibold">Upgrade</h3>
+              <p class="text-sm font-semibold mt-2 min-h-[100px]">
+                Upgrade your Dynamics 365 system without the downtime or drama
+              </p>
+            </div>
+            <div class="text-2xl">→</div>
           </div>
           <div class="flip-card-back bg-[#0087ff] rounded-xl text-white p-6 text-center flex flex-col justify-center">
             <h3 class="text-xl font-bold mb-2">Upgrade Without the Disruption</h3>
@@ -268,14 +280,17 @@
         </div>
       </div>
 
-      <!-- Card 5 -->
       <div class="flip-card w-full h-64">
         <div class="flip-card-inner w-full h-full">
-          <div class="flip-card-front bg-white rounded-xl shadow-lg p-6 text-center">
-            <img src="Photos/data-gathering.png" class="w-12 mx-auto mb-4" />
-            <h3 class="text-xl font-semibold">Migration</h3>
-            <h5 class="text-x1 font-seimibold">Smooth migration to D365 from legacy systems — zero data loss, zero headaches</h5>
-            <div class="text-2xl mt-4">→</div>
+          <div class="flip-card-front bg-white rounded-xl shadow-lg p-6 flex flex-col justify-between text-center h-full">
+            <div>
+              <img src="Photos/data-gathering.png" class="w-12 mx-auto mb-4" />
+              <h3 class="text-xl font-semibold">Migration</h3>
+              <p class="text-sm font-semibold mt-2 min-h-[100px]">
+                Smooth migration to D365 from legacy systems — zero data loss, zero headaches
+              </p>
+            </div>
+            <div class="text-2xl">→</div>
           </div>
           <div class="flip-card-back bg-[#0087ff] rounded-xl text-white p-6 text-center flex flex-col justify-center">
             <h3 class="text-xl font-bold mb-2">Your Data’s Next Destination: Dynamics 365</h3>
@@ -284,14 +299,17 @@
         </div>
       </div>
 
-      <!-- Card 6 -->
       <div class="flip-card w-full h-64">
         <div class="flip-card-inner w-full h-full">
-          <div class="flip-card-front bg-white rounded-xl shadow-lg p-6 text-center">
-            <img src="Photos/solution.png" class="w-12 mx-auto mb-4" />
-            <h3 class="text-xl font-semibold">Integration</h3>
-            <h5 class="text-x1 font-seimibold">We connect Dynamics 365 with your existing tools to create one powerful ecosystem</h5>
-            <div class="text-2xl mt-4">→</div>
+          <div class="flip-card-front bg-white rounded-xl shadow-lg p-6 flex flex-col justify-between text-center h-full">
+            <div>
+              <img src="Photos/solution.png" class="w-12 mx-auto mb-4" />
+              <h3 class="text-xl font-semibold">Integration</h3>
+              <p class="text-sm font-semibold mt-2 min-h-[100px]">
+                We connect Dynamics 365 with your existing tools to create one powerful ecosystem
+              </p>
+            </div>
+            <div class="text-2xl">→</div>
           </div>
           <div class="flip-card-back bg-[#0087ff] rounded-xl text-white p-6 text-center flex flex-col justify-center">
             <h3 class="text-xl font-bold mb-2">Connect Everything. Run Smarter</h3>
@@ -300,14 +318,17 @@
         </div>
       </div>
 
-      <!-- Card 7 -->
       <div class="flip-card w-full h-64">
         <div class="flip-card-inner w-full h-full">
-          <div class="flip-card-front bg-white rounded-xl shadow-lg p-6 text-center">
-            <img src="Photos/panel.png" class="w-12 mx-auto mb-4" />
-            <h3 class="text-xl font-semibold">Customization</h3>
-            <h5 class="text-x1 font-seimibold">Tailored D365 customizations that fit your business like a glove</h5>
-            <div class="text-2xl mt-4">→</div>
+          <div class="flip-card-front bg-white rounded-xl shadow-lg p-6 flex flex-col justify-between text-center h-full">
+            <div>
+              <img src="Photos/panel.png" class="w-12 mx-auto mb-4" />
+              <h3 class="text-xl font-semibold">Customization</h3>
+              <p class="text-sm font-semibold mt-2 min-h-[100px]">
+                Tailored D365 customizations that fit your business like a glove
+              </p>
+            </div>
+            <div class="text-2xl">→</div>
           </div>
           <div class="flip-card-back bg-[#0087ff] rounded-xl text-white p-6 text-center flex flex-col justify-center">
             <h3 class="text-xl font-bold mb-2">Your Business Isn’t Generic. Your D365 Setup Shouldn’t Be Either</h3>
@@ -323,7 +344,7 @@
             <img src="Photos/group.png" class="w-12 mx-auto mb-4" />
             <h3 class="text-xl font-semibold text-[15px]">Dedicated Contractual Resources</h3>
             <h5 class="text-x1 font-seimibold">Get skilled D365 experts on contract — fully dedicated, fully integrated with your team</h5>
-            <div class="text-2xl mt-4">→</div>
+            <div class="text-2xl mt-2">→</div>
           </div>
           <div class="flip-card-back bg-[#0087ff] rounded-xl text-white p-6 text-center flex flex-col justify-center">
             <h3 class="text-lg font-bold mb-2">Need D365 Talent? We’ve Got You Covered</h3>
@@ -334,8 +355,7 @@
 
     </div>
   </div>
-</section>
-
+</section> 
 <!-- Gohra D365 Video Section -->  
 <section id="gohra-d365-video" class="bg-blue-50 py-16">
   <div class="container mx-auto px-6 md:px-12 flex flex-col lg:flex-row items-center lg:items-start gap-10">
