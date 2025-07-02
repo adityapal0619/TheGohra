@@ -18,8 +18,6 @@
     <ul class="hidden md:flex items-center space-x-6 text-black font-medium">
       <li><a href="index.html" class="hover:text-blue-600">Home</a></li>
       <li><a href="AboutUs.html" class="hover:text-blue-600">About Us</a></li>
-      <li><a href="#" class="hover:text-blue-600">Our Partners</a></li>
-
       <!-- Mega Menu -->
       <li class="relative group">
         <button class="hover:text-blue-600 focus:outline-none">Service & Solutions</button>
@@ -52,8 +50,8 @@
           </div>
         </div>
       </li>
+       <li><a href="#" class="hover:text-blue-600">Our Partners</a></li>
       <li><a href="Career.html" class="hover:text-blue-600">Career</a></li>
-      <li><a href="#" class="hover:text-blue-600">Resources</a></li>
     </ul>
 
     <!-- Contact & MS Badge -->
@@ -84,6 +82,16 @@
     <a href="Contactus.html" class="block border border-blue-600 text-center px-4 py-2 rounded font-semibold hover:bg-blue-50">CONTACT US</a>
   </div>
 </nav>
+
+<script>
+  // Optional: Add click event to keep dropdown open on click if needed
+  document.querySelectorAll('nav li.group > button').forEach(button => {
+    button.addEventListener('click', (e) => {
+      const dropdown = button.nextElementSibling;
+      dropdown.classList.toggle('hidden');
+    });
+  });
+</script>
 
 <script>
   // Optional: Add click event to keep dropdown open on click if needed
