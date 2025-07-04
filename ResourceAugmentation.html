@@ -4,6 +4,35 @@
   <meta charset="UTF-8">
   <title>Microsoft Dynamics 365 ERP Resources | Gohra Technologies</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+     @keyframes ripple {
+      0% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: scale(1.8);
+        opacity: 0;
+      }
+    }
+
+    .ripple-ring {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border: 4px solid #dd6b20;
+      border-radius: 9999px;
+      animation: ripple 1.5s infinite;
+    }
+  </style>
+   <script src="https://unpkg.com/alpinejs" defer></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script>
+    // Toggle mobile menu
+    function toggleMobileMenu() {
+      document.getElementById('mobileMenu').classList.toggle('hidden');
+    }
+  </script>
 </head>
 <body class="bg-gray-100 text-gray-800">
     <!-- Mega Navigation Bar with Tailwind CSS -->
@@ -16,47 +45,48 @@
 
     <!-- Desktop Menu -->
     <ul class="hidden md:flex items-center space-x-6 text-black font-medium">
-      <li><a href="index.html" class="hover:text-blue-600">Home</a></li>
-      <li><a href="AboutUs.html" class="hover:text-blue-600">About Us</a></li>
+      <li><a href="index.html" class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 hover:text-orange-600">Home</a></li>
+      <li><a href="AboutUs.html" class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 hover:text-orange-600">About Us</a></li>
+
       <!-- Mega Menu -->
       <li class="relative group">
-        <button class="hover:text-blue-600 focus:outline-none">Service & Solutions</button>
-        <div class="fixed left-0 top-[70px] mt-3 hidden group-hover:flex bg-black text-white p-8 rounded-lg shadow-xl w-full z-50">
-          <div class="grid grid-cols-3 gap-8 w-full max-w-7xl mx-auto">
-
-            <!-- Column 1 -->
+        <button class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 hover:text-orange-600 focus:outline-none font-medium">
+          Service & Solutions
+        </button>
+        <div class="absolute left-1/2 -translate-x-1/2 top-full mt-1 w-3 h-3 bg-black rotate-45 z-40 hidden group-hover:block"></div>
+        <div class="absolute left-0 top-full mt-4 hidden group-hover:flex w-[800px] bg-black text-white p-8 z-30 shadow-xl rounded-b-xl pointer-events-auto">
+          <div class="grid grid-cols-3 gap-10 text-sm w-full">
             <div>
+              <h4 class="font-semibold mb-3 text-base">Microsoft Dynamics Solutions</h4>
               <ul class="space-y-1">
-                <li><a href="d365f&o.html" class="hover:underline">Microsoft Dynamics 365 Finance and Operations</a></li>
-                <li><a href="d365central.html" class="hover:underline">Microsoft Dynamics 365 Business Central</a></li>
-                <li><a href="PowerBI.html" class="hover:underline">Power Platform</a></li>
+                <li><a href="d365f&o.html" class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 hover:after:scale-x-100 hover:text-orange-600">Microsoft Dynamics 365 Finance and Operations</a></li>
+                <li><a href="d365central.html" class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 hover:after:scale-x-100 hover:text-orange-600">Microsoft Dynamics 365 Business Central</a></li>
+                <li><a href="PowerBI.html" class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 hover:after:scale-x-100 hover:text-orange-600">Power Apps & Automation</a></li>
               </ul>
             </div>
-
-            <!-- Column 2 -->
-            <div>
+            <div class="border-l border-gray-700 pl-6">
+              <h4 class="font-semibold mb-3 text-base">Consulting & Augmentation</h4>
               <ul class="space-y-1">
-                <li><a href="ResourceAugmentation.html" class="hover:underline">Resource Augmentation</a></li>
+                <li><a href="ResourceAugmentation.html" class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 hover:after:scale-x-100 hover:text-orange-600">Resource Augmentation</a></li>
               </ul>
             </div>
-
-            <!-- Column 3 -->
-            <div>
+            <div class="border-l border-gray-700 pl-6">
+              <h4 class="font-semibold mb-3 text-base">Tools & Support</h4>
               <ul class="space-y-1">
-                <li><a href="#" class="hover:underline">Gohra Assist</a></li>
+                <li><a href="#" class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 hover:after:scale-x-100 hover:text-orange-600">Gohra Assist</a></li>
               </ul>
             </div>
-
           </div>
         </div>
       </li>
-       <li><a href="#" class="hover:text-blue-600">Our Partners</a></li>
-      <li><a href="Career.html" class="hover:text-blue-600">Career</a></li>
+
+      <li><a href="#" class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 hover:text-orange-600">Our Partners</a></li>
+      <li><a href="Career.html" class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 hover:text-orange-600">Career</a></li>
     </ul>
 
-    <!-- Contact & MS Badge -->
+    <!-- Contact Button & MS Badge -->
     <div class="hidden md:flex items-center space-x-4">
-      <a href="Contactus.html" class="border border-blue-600 text-white bg-blue-600 px-4 py-2 rounded font-semibold hover:bg-blue-700">Connect with Us</a>
+      <a href="Contactus.html" class="border border-orange-600 text-white bg-orange-600 px-4 py-2 rounded font-semibold hover:bg-white hover:text-black">Connect with Us</a>
       <div class="flex items-center space-x-1">
         <img src="https://img.icons8.com/color/48/000000/microsoft.png" class="h-6 w-6" alt="MS">
         <span class="text-sm text-gray-600 leading-tight">Microsoft<br>Solutions Partner</span>
@@ -64,7 +94,7 @@
     </div>
 
     <!-- Hamburger Icon -->
-    <button id="menuBtn" class="md:hidden text-blue-600 focus:outline-none">
+    <button onclick="toggleMobileMenu()" class="md:hidden text-blue-600 focus:outline-none">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
       </svg>
@@ -72,41 +102,35 @@
   </div>
 
   <!-- Mobile Menu -->
-  <div id="mobileMenu" class="mt-3 hidden md:hidden bg-white space-y-2 px-2 pb-4 text-blue-600 font-medium">
-    <a href="#" class="block hover:bg-blue-50 px-2 py-1 rounded">Software</a>
-    <a href="#" class="block hover:bg-blue-50 px-2 py-1 rounded">Service</a>
-    <a href="#" class="block hover:bg-blue-50 px-2 py-1 rounded">Industries</a>
-    <a href="#" class="block hover:bg-blue-50 px-2 py-1 rounded">Partner</a>
-    <a href="#" class="block hover:bg-blue-50 px-2 py-1 rounded">About</a>
-    <a href="#" class="block hover:bg-blue-50 px-2 py-1 rounded">Resources</a>
-    <a href="Contactus.html" class="block border border-blue-600 text-center px-4 py-2 rounded font-semibold hover:bg-blue-50">CONTACT US</a>
+  <div id="mobileMenu" class="hidden md:hidden mt-3 bg-white px-4 pb-4 text-black font-medium space-y-2" x-data="{ open: false }">
+    <a href="index.html" class="block hover:bg-orange-50 px-2 py-2 rounded">Home</a>
+    <a href="AboutUs.html" class="block hover:bg-orange-50 px-2 py-2 rounded">About Us</a>
+
+    <!-- Service & Solutions dropdown -->
+    <div class="relative">
+      <button @click="open = !open" class="w-full text-left px-2 py-2 rounded hover:bg-orange-50 flex justify-between items-center">
+        Service & Solutions
+        <svg class="w-4 h-4 transform transition-transform" :class="open ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+      <div x-show="open" class="mt-2 space-y-1 pl-4 text-sm">
+        <a href="d365f&o.html" class="block hover:bg-orange-50 px-2 py-1 rounded">Dynamics 365 F&O</a>
+        <a href="d365central.html" class="block hover:bg-orange-50 px-2 py-1 rounded">Microsoft Dynamics 365 Business Central</a>
+        <a href="PowerBI.html" class="block hover:bg-orange-50 px-2 py-1 rounded">Power Apps & Automation</a>
+        <a href="ResourceAugmentation.html" class="block hover:bg-orange-50 px-2 py-1 rounded">Resource Augmentation</a>
+        <a href="#" class="block hover:bg-orange-50 px-2 py-1 rounded">Gohra Assist</a>
+      </div>
+    </div>
+
+    <a href="#" class="block hover:bg-orange-50 px-2 py-2 rounded">Our Partners</a>
+    <a href="Career.html" class="block hover:bg-orange-50 px-2 py-2 rounded">Career</a>
+    <a href="Contactus.html" class="block border border-orange-600 text-center px-4 py-2 rounded font-semibold hover:bg-orange-50 text-orange-600">Contact Us</a>
   </div>
 </nav>
-
-<script>
-  // Optional: Add click event to keep dropdown open on click if needed
-  document.querySelectorAll('nav li.group > button').forEach(button => {
-    button.addEventListener('click', (e) => {
-      const dropdown = button.nextElementSibling;
-      dropdown.classList.toggle('hidden');
-    });
-  });
-</script>
-
-<script>
-  // Optional: Add click event to keep dropdown open on click if needed
-  document.querySelectorAll('nav li.group > button').forEach(button => {
-    button.addEventListener('click', (e) => {
-      const dropdown = button.nextElementSibling;
-      dropdown.classList.toggle('hidden');
-    });
-  });
-</script>
-
-
   <!-- Hero Section -->
-  <section class="bg-blue-800 text-white py-20 px-6 text-center">
-    <h1 class="text-4xl sm:text-5xl font-bold mb-4">Looking for Expert and Experienced Resources of Microsoft Dynamics 365 ERP</h1>
+  <section class="bg-black text-white py-20 px-6 text-center">
+    <h1 class="text-4xl sm:text-5xl font-bold mb-4 ">Looking for Expert and Experienced Resources of Microsoft Dynamics 365 ERP</h1>
     <p class="text-lg sm:text-xl max-w-4xl mx-auto">Get in Touch with Us!</p>
   </section>
 
@@ -122,37 +146,130 @@
 
   <!-- Our Approach Section -->
   <section class="bg-white py-20 px-6">
-    <h2 class="text-4xl font-bold text-center mb-12">Our Approach</h2>
-    <div class="flex justify-center gap-6 flex-wrap max-w-6xl mx-auto">
-      <!-- Step Template -->
-      <div class="flex items-center">
-        <div class="rounded-full border-4 border-blue-600 bg-blue-100 text-center w-32 h-32 flex items-center justify-center font-semibold text-md">Enquiry</div>
-        <div class="w-0 h-0 border-t-[32px] border-t-transparent border-b-[32px] border-b-transparent border-l-[32px] border-l-blue-600"></div>
+  <h2 class="text-4xl font-bold text-center mb-12">Our Approach</h2>
+  <div class="flex justify-center gap-6 flex-wrap max-w-6xl mx-auto">
+    
+    <!-- Step Template -->
+    <div class="flex items-center relative">
+      <div class="relative w-32 h-32 flex items-center justify-center text-md font-semibold border-4 border-orange-600 bg-orange-100 rounded-full overflow-hidden">
+        <div class="ripple-ring"></div>
+        <span class="z-10">Enquiry</span>
       </div>
-      <div class="flex items-center">
-        <div class="rounded-full border-4 border-blue-600 bg-blue-100 text-center w-32 h-32 flex items-center justify-center font-semibold text-md">Evaluation</div>
-        <div class="w-0 h-0 border-t-[32px] border-t-transparent border-b-[32px] border-b-transparent border-l-[32px] border-l-blue-600"></div>
+      <div class="w-0 h-0 border-t-[32px] border-t-transparent border-b-[32px] border-b-transparent border-l-[32px] border-l-orange-600"></div>
+    </div>
+
+    <div class="flex items-center relative">
+      <div class="relative w-32 h-32 flex items-center justify-center text-md font-semibold border-4 border-orange-600 bg-orange-100 rounded-full overflow-hidden">
+        <div class="ripple-ring"></div>
+        <span class="z-10">Evaluation</span>
       </div>
-      <div class="flex items-center">
-        <div class="rounded-full border-4 border-blue-600 bg-blue-100 text-center w-32 h-32 flex items-center justify-center font-semibold text-md">Planning</div>
-        <div class="w-0 h-0 border-t-[32px] border-t-transparent border-b-[32px] border-b-transparent border-l-[32px] border-l-blue-600"></div>
+      <div class="w-0 h-0 border-t-[32px] border-t-transparent border-b-[32px] border-b-transparent border-l-[32px] border-l-orange-600"></div>
+    </div>
+
+    <div class="flex items-center relative">
+      <div class="relative w-32 h-32 flex items-center justify-center text-md font-semibold border-4 border-orange-600 bg-orange-100 rounded-full overflow-hidden">
+        <div class="ripple-ring"></div>
+        <span class="z-10">Planning</span>
       </div>
-      <div class="flex items-center">
-        <div class="rounded-full border-4 border-blue-600 bg-blue-100 text-center w-32 h-32 flex items-center justify-center font-semibold text-md">Onboarding</div>
-        <div class="w-0 h-0 border-t-[32px] border-t-transparent border-b-[32px] border-b-transparent border-l-[32px] border-l-blue-600"></div>
+      <div class="w-0 h-0 border-t-[32px] border-t-transparent border-b-[32px] border-b-transparent border-l-[32px] border-l-orange-600"></div>
+    </div>
+
+    <div class="flex items-center relative">
+      <div class="relative w-32 h-32 flex items-center justify-center text-md font-semibold border-4 border-orange-600 bg-orange-100 rounded-full overflow-hidden">
+        <div class="ripple-ring"></div>
+        <span class="z-10">Onboarding</span>
       </div>
-      <div class="flex items-center">
-        <div class="rounded-full border-4 border-blue-600 bg-blue-100 text-center w-32 h-32 flex items-center justify-center font-semibold text-md">Execution</div>
+      <div class="w-0 h-0 border-t-[32px] border-t-transparent border-b-[32px] border-b-transparent border-l-[32px] border-l-orange-600"></div>
+    </div>
+
+    <div class="flex items-center relative">
+      <div class="relative w-32 h-32 flex items-center justify-center text-md font-semibold border-4 border-orange-600 bg-orange-100 rounded-full overflow-hidden">
+        <div class="ripple-ring"></div>
+        <span class="z-10">Execution</span>
       </div>
     </div>
-  </section>
+
+  </div>
+</section>
 
   <!-- CTA Section -->
-  <section class="bg-blue-800 text-white py-16 text-center">
-    <h2 class="text-3xl sm:text-4xl font-bold mb-4">Need Microsoft Dynamics 365 ERP Resources?</h2>
+  <section class="bg-black text-white py-16 text-center mb-4">
+    <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-orange-600">Need Microsoft Dynamics 365 ERP Resources?</h2>
     <p class="mb-6 text-lg">Contact Gohra Technologies today to get expert help with Implementation, Support, or Upgrades.</p>
-    <a href="#contact" class="bg-white text-blue-800 font-semibold px-6 py-3 rounded-full hover:bg-gray-100 transition">Contact Us</a>
+    <a href="Contactus.html" class="bg-[#ff6a00] hover:bg-white hover:text-black text-white font-semibold px-8 py-4 rounded-lg shadow-md transition">
+      Contact Us
+    </a>
   </section>
+
+  <footer class="bg-black text-white py-10 px-6 md:px-16">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
+    
+    <!-- Logo & About -->
+    <div>
+      <h4 class="text-xl font-semibold mb-2">Gohra Technologies</h4>
+      <p class="text-sm leading-6">
+        Empowering Businesses with Smart, Scalable Tech.
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div>
+      <h3 class="text-lg font-semibold mb-3">Quick Links</h3>
+      <ul class="space-y-2 text-sm text-gray-300">
+        <li><a href="index.html" class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 hover:text-orange-600">Home</a>
+        </li>
+        <li><li>
+  <a href="AboutUs.html" class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 hover:text-orange-600">
+    About Us
+  </a>
+</li>
+</li>
+        <li><a href="#" class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 hover:text-orange-600">Services & Solutions</a></li>
+        <li><a href="#" class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 hover:text-orange-600">Our Partners</a></li>
+        <li><a href="Career.html" class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 hover:text-orange-600">Career</a></li>
+      </ul>
+    </div>
+
+    <!-- Our Services -->
+    <div>
+      <h3 class="text-lg font-semibold mb-3">Services</h3>
+      <ul class="space-y-2 text-sm text-gray-300">
+        <li><a href="d365f&o.html" class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 hover:text-orange-600">Microsoft Dynamics 365 Finance and Operations</a></li>
+        <li><a href="d365central.html" class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 hover:text-orange-600">Microsoft Dynamics 365 Business Central</a></li>
+        <li><a href="PowerBI.html" class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 hover:text-orange-600">Power Apps and Power Automation</a></li>
+        <li><a href="ResourceAugmentation.html" class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 hover:text-orange-600">Resource Augmentation</a></li>
+        <li><a href="#" class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 hover:text-orange-600">Gohra Assist</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact & Social -->
+    <div>
+      <h3 class="text-lg font-semibold mb-3">Contact</h3>
+      <a href="https://mail.google.com/mail/?view=cm&to=hello@thegohra.com" target="_blank" class="text-sm text-gray-300 hover:text-orange-600">📧 hello@thegohra.com
+</a>
+
+<div class="flex space-x-4 mt-4" id="red">
+        <a href="https://www.linkedin.com/company/gohra-technologies/" aria-label="LinkedIn"  class="hover:text-orange-600">
+          <i class="fab fa-linkedin text-2xl"></i>
+        </a>
+        <a href="http://www.instagram.com/thegohra" aria-label="Instagram" class="hover:text-orange-600">
+          <i class="fab fa-instagram text-2xl"></i>
+        </a>
+        <a href="https://api.whatsapp.com/send?phone=9289280645" aria-label="Whatsapp" class="hover:text-orange-600">
+          <i class="fa-brands fa-whatsapp text-2xl"></i>
+        </a>
+      </div>
+            
+        </div>
+    </div>
+
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="border-t border-gray-700 mt-10 pt-6 text-center text-sm text-gray-400">
+    &copy; 2025 Gohra Technologies. All rights reserved.
+  </div>
+</footer>
 
 </body>
 </html>

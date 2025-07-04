@@ -38,3 +38,9 @@
  #line-hover:hover::after {
   transform: scaleX(1);
 }
+
+#boxsize{
+  border: 4px solid #f58e4a
+;
+  margin: 5px 10px;
+}
