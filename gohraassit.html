@@ -5,93 +5,210 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gohra Assist</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+   <script>
+    // Toggle mobile menu
+    function toggleMobileMenu() {
+      document.getElementById('mobileMenu').classList.toggle('hidden');
+    }
+  </script>
 </head>
-<body class="font-sans text-black bg-white">
+<body class="font-sans">
+   <!-- Mega Navigation Bar -->
+  <nav class="border-b px-4 py-3 md:px-8 bg-white shadow-sm relative z-50">
+    <div class="flex items-center justify-between">
+      
+      <!-- Logo -->
+      <div class="flex items-center space-x-3">
+        <img src="Photos/logo.png" alt="Logo" class="h-11 w-30">
+      </div>
 
-  <!-- Section 1: Hero -->
-  <section class="flex flex-col md:flex-row items-center justify-between px-6 py-16 bg-white">
-    <img src="./images/1.png" alt="Hero Image" class="w-full md:w-1/2 mb-6 md:mb-0">
-    <div class="md:w-1/2 md:pl-10">
-      <h1 class="text-4xl md:text-5xl font-bold mb-4">You Close Deals.<br>We Handle the Details!</h1>
-      <p class="text-lg mb-6">The smart solution to help manage tasks and boost productivity for Real Estate businesses.</p>
-      <a href="https://www.thegohra.com" target="_blank"
-         class="flex items-center border-2 rounded-full px-4 py-2 bg-white text-black hover:bg-orange-500 hover:text-black transition-all duration-300 w-fit">
-        <span class="text-lg underline">www.thegohra.com</span>
-        <span class="ml-3 text-2xl">🔍</span>
-      </a>
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex items-center space-x-6 text-black font-medium">
+        <li>
+          <a href="index.html"
+             class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 hover:text-orange-600">
+            Home
+          </a>
+        </li>
+
+        <li>
+          <a href="AboutUs.html"
+             class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 hover:text-orange-600">
+            About Us
+          </a>
+        </li>
+
+        <!-- Mega Menu -->
+        <li class="relative group">
+          <button class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 hover:text-orange-600 font-medium">
+            Service & Solutions
+          </button>
+
+          <!-- Triangle Arrow -->
+          <div class="absolute left-1/2 -translate-x-1/2 top-full mt-1 w-3 h-3 bg-black rotate-45 z-40 hidden group-hover:block pointer-events-none"></div>
+
+          <!-- Mega Dropdown -->
+          <div class="absolute left-0 top-full mt-2 group-hover:flex hidden w-[800px] bg-black text-white p-8 z-30 shadow-xl rounded-b-xl">
+            <div class="grid grid-cols-3 gap-10 text-sm w-full">
+              
+              <!-- Column 1 -->
+              <div>
+                <h4 class="font-semibold mb-3 text-base text-orange-600">Microsoft Dynamics Solutions</h4>
+                <ul class="space-y-1">
+                  <li><a href="d365f&o.html" class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 hover:after:scale-x-100">Microsoft Dynamics 365 Finance and Operations</a></li>
+                  <li><a href="d365central.html" class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 hover:after:scale-x-100">Microsoft Dynamics 365 Business Central</a></li>
+                  <li><a href="PowerBI.html" class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 hover:after:scale-x-100">Power Apps & Automation</a></li>
+                </ul>
+              </div>
+
+              <!-- Column 2 -->
+              <div class="border-l border-gray-700 pl-4">
+                <h4 class="font-semibold mb-3 text-base text-orange-600">Consulting & Augmentation</h4>
+                <ul class="space-y-1">
+                  <li><a href="ResourceAugmentation.html" class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 hover:after:scale-x-100">Resource Augmentation</a></li>
+                </ul>
+              </div>
+
+              <!-- Column 3 -->
+              <div class="border-l border-gray-700 pl-4">
+                <h4 class="font-semibold mb-3 text-base text-orange-600">Tools & Support</h4>
+                <ul class="space-y-1">
+                  <li><a href="gohraassit.html" class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 hover:after:scale-x-100">Gohra Assist</a></li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+        </li>
+
+        <li><a href="Partners.html" class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 hover:text-orange-600">Our Partners</a></li>
+
+        <li><a href="Career.html" class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 hover:text-orange-600">Career</a></li>
+      </ul>
+
+      <!-- Contact Button & MS Badge -->
+      <div class="hidden md:flex items-center space-x-4">
+        <a href="Contactus.html" class="border border-orange-600 text-white bg-orange-600 px-4 py-2 rounded font-semibold hover:bg-white hover:text-black">
+          Connect with Us
+        </a>
+        <div class="flex items-center space-x-1">
+          <img src="https://img.icons8.com/color/48/000000/microsoft.png" class="h-6 w-6" alt="MS">
+          <span class="text-sm text-gray-600 leading-tight">Microsoft<br>Solutions Partner</span>
+        </div>
+      </div>
+
+      <!-- Hamburger -->
+      <button onclick="toggleMobileMenu()" class="md:hidden text-orange-600 focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
     </div>
-  </section>
 
-  <!-- Section 2: About Us -->
-  <section class="flex flex-col-reverse md:flex-row items-center justify-between px-6 py-16 bg-black text-white">
-    <div class="md:w-1/2 md:pr-10">
-      <h2 class="text-3xl md:text-4xl font-bold mb-4">About Us</h2>
-      <p class="mb-6 leading-relaxed">
-        At Gohra Assist, we specialize in providing reliable and efficient Virtual Assistant (VA) services tailored for real estate professionals and companies. Based in India, our dedicated team of skilled professionals supports real estate agents and businesses with a range of essential services, including CRM support and management, listing and lead management, customer service, and administrative tasks.<br><br>
-        Our mission is to help you streamline your operations and focus on growth while we handle the day-to-day tasks that keep your business running smoothly. With a deep understanding of the real estate industry and a commitment to excellence, Gohra Technologies delivers solutions that are not only cost-effective but also highly personalized to meet your unique business needs.
-      </p>
-      <a href="https://www.thegohra.com" target="_blank"
-         class="flex items-center border-2 rounded-full px-4 py-2 bg-white text-black hover:bg-orange-500 hover:text-black transition-all duration-300 w-fit">
-        <span class="text-lg underline">www.thegohra.com</span>
-        <span class="ml-3 text-2xl">🔍</span>
-      </a>
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden mt-3 bg-white px-4 pb-4 text-black font-medium space-y-2">
+      <a href="index.html" class="block hover:bg-orange-50 px-2 py-2 rounded">Home</a>
+      <a href="AboutUs.html" class="block hover:bg-orange-50 px-2 py-2 rounded">About Us</a>
+
+      <!-- Service & Solutions dropdown in mobile -->
+      <div>
+        <span class="block font-semibold px-2 py-2 text-orange-600">Service & Solutions</span>
+        <div class="pl-4 space-y-1 text-sm">
+          <a href="d365f&o.html" class="block hover:bg-orange-50 px-2 py-1 rounded">Dynamics 365 F&O</a>
+          <a href="d365central.html" class="block hover:bg-orange-50 px-2 py-1 rounded">Business Central</a>
+          <a href="PowerBI.html" class="block hover:bg-orange-50 px-2 py-1 rounded">Power Apps & Automation</a>
+          <a href="ResourceAugmentation.html" class="block hover:bg-orange-50 px-2 py-1 rounded">Resource Augmentation</a>
+          <a href="gohraassit.html" class="block hover:bg-orange-50 px-2 py-1 rounded">Gohra Assist</a>
+        </div>
+      </div>
+
+      <a href="Partners.html" class="block hover:bg-orange-50 px-2 py-2 rounded">Our Partners</a>
+      <a href="Career.html" class="block hover:bg-orange-50 px-2 py-2 rounded">Career</a>
+      <a href="Contactus.html" class="block border border-orange-600 text-center px-4 py-2 rounded font-semibold hover:bg-orange-50 text-orange-600">Contact Us</a>
     </div>
-    <img src="./images/2.png" alt="About Image" class="w-full md:w-1/2 mb-6 md:mb-0">
-  </section>
+  </nav>
 
-  <!-- Section 3: CRM Management -->
-  <section class="flex flex-col md:flex-row items-center justify-between px-6 py-16 bg-black text-white">
-    <img src="./images/3.png" alt="CRM Image" class="w-full md:w-1/2 mb-6 md:mb-0">
-    <div class="md:w-1/2 md:pl-10">
-      <h2 class="text-3xl md:text-4xl font-bold mb-4">CRM Management</h2>
-      <p class="mb-6 leading-relaxed">
-        Our team ensures end-to-end CRM management – from lead capture and data entry to real-time record updates and pipeline tracking – maintaining a clean, structured, and actionable database for your sales and marketing workflows.
-      </p>
-      <a href="https://www.thegohra.com" target="_blank"
-         class="flex items-center border-2 rounded-full px-4 py-2 bg-white text-black hover:bg-orange-500 hover:text-black transition-all duration-300 w-fit">
-        <span class="text-lg underline">www.thegohra.com</span>
-        <span class="ml-3 text-2xl">🔍</span>
-      </a>
-    </div>
-  </section>
-
-  <!-- Section 4: Social Media -->
-  <section class="flex flex-col-reverse md:flex-row items-center justify-between px-6 py-16 bg-black text-white">
-    <div class="md:w-1/2 md:pr-10">
-      <h2 class="text-3xl md:text-4xl font-bold mb-4">Social Media</h2>
-      <p class="mb-6 leading-relaxed">
-        Grow your online presence and generate more leads.<br>
-        Our team supports your marketing efforts by managing social media accounts, designing promotional materials (flyers, brochures, etc.), and assisting with email marketing campaigns. Whether it's posting listings or running digital outreach, we help build your brand and attract new business.
-      </p>
-      <a href="https://www.thegohra.com" target="_blank"
-         class="flex items-center border-2 rounded-full px-4 py-2 bg-white text-black hover:bg-orange-500 hover:text-black transition-all duration-300 w-fit">
-        <span class="text-lg underline">www.thegohra.com</span>
-        <span class="ml-3 text-2xl">🔍</span>
-      </a>
-    </div>
-    <img src="./images/6.png" alt="Social Media Image" class="w-full md:w-1/2 mb-6 md:mb-0">
-  </section>
-
-  <!-- Section 5: Admin Support -->
-  <section class="flex flex-col md:flex-row items-center justify-between px-6 py-16 bg-black text-white">
-    <img src="./images/7.png" alt="Admin Image" class="w-full md:w-1/2 mb-6 md:mb-0">
-    <div class="md:w-1/2 md:pl-10">
-      <h2 class="text-3xl md:text-4xl font-bold mb-4">Administrative Support</h2>
-      <p class="mb-6 leading-relaxed">
-        Stay organized and save time with our reliable administrative assistance. Our virtual assistants handle routine yet essential tasks like calendar management, appointment scheduling, and email organization. We also prepare documents, manage digital files, and ensure that every administrative detail is taken care of so you can focus on what you do best – selling properties and closing deals.
-      </p>
-      <a href="https://www.thegohra.com" target="_blank"
-         class="flex items-center border-2 rounded-full px-4 py-2 bg-white text-black hover:bg-orange-500 hover:text-black transition-all duration-300 w-fit">
-        <span class="text-lg underline">www.thegohra.com</span>
-        <span class="ml-3 text-2xl">🔍</span>
-      </a>
-    </div>
-  </section>
-
+  <!-- Script for mobile menu -->
+  <script>
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('hidden');
+    }
+  </script>
+  <img src="Photos/1.png" alt="image">
+  <img src="Photos/2.png" alt="image">
+  <img src="Photos/3.png" alt="image">
+  <img src="Photos/4.png" alt="image">
+  <img src="Photos/5.png" alt="image">
+  <img src="Photos/6.png" alt="image">
+  <img src="Photos/7.png" alt="image">
+  <img src="Photos/8.png" alt="image">
+  <img src="Photos/9.png" alt="image">
+  <img src="Photos/10.png" alt="image">
+  <img src="Photos/11.png" alt="image">
+  <img src="Photos/12.png" alt="image">
   <!-- Footer -->
-  <footer class="text-center py-6 bg-white border-t">
-    <p class="text-gray-600">© 2025 Gohra Assist | All rights reserved</p>
-  </footer>
-
+<footer class="bg-black text-white py-10 px-6 md:px-16">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
+    <!-- Logo & About -->
+    <div>
+      <h4 class="text-xl font-semibold mb-2">Gohra Technologies</h4>
+      <p class="text-sm leading-6">
+        Empowering Businesses with Smart, Scalable Tech.
+      </p>
+    </div>
+    <!-- Quick Links -->
+    <div>
+      <h3 class="text-lg font-semibold mb-3">Quick Links</h3>
+      <ul class="space-y-2 text-sm text-gray-300">
+        <li><a href="index.html" class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 hover:text-orange-600">Home</a>
+        </li>
+        <li><li>
+  <a href="AboutUs.html" class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 hover:text-orange-600">
+    About Us
+  </a>
+</li>
+</li>
+        <li><a href="d365f&o.html" class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 hover:text-orange-600">Services & Solutions</a></li>
+        <li><a href="Partners.html" class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 hover:text-orange-600">Our Partners</a></li>
+        <li><a href="Career.html" class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 hover:text-orange-600">Career</a></li>
+      </ul>
+    </div>
+    <!-- Our Services -->
+    <div>
+      <h3 class="text-lg font-semibold mb-3">Services</h3>
+      <ul class="space-y-2 text-sm text-gray-300">
+        <li><a href="d365f&o.html" class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 hover:text-orange-600">Microsoft Dynamics 365 Finance and Operations</a></li>
+        <li><a href="d365central.html" class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 hover:text-orange-600">Microsoft Dynamics 365 Business Central</a></li>
+        <li><a href="PowerBI.html" class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 hover:text-orange-600">Power Apps and Power Automation</a></li>
+        <li><a href="ResourceAugmentation.html" class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 hover:text-orange-600">Resource Augmentation</a></li>
+        <li><a href="gohraassit.html" class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 hover:text-orange-600">Gohra Assist</a></li>
+      </ul>
+    </div>
+    <!-- Contact & Social -->
+    <div>
+      <h3 class="text-lg font-semibold mb-3">Contact</h3>
+      <a href="https://mail.google.com/mail/?view=cm&to=hello@thegohra.com" target="_blank" class="text-sm text-gray-300 hover:text-orange-600">📧 hello@thegohra.com
+</a>
+<div class="flex space-x-4 mt-4" id="red">
+        <a href="https://www.linkedin.com/company/gohra-technologies/" aria-label="LinkedIn"  class="hover:text-orange-600">
+          <i class="fab fa-linkedin text-2xl"></i>
+        </a>
+        <a href="http://www.instagram.com/thegohra" aria-label="Instagram" class="hover:text-orange-600">
+          <i class="fab fa-instagram text-2xl"></i>
+        </a>
+        <a href="https://api.whatsapp.com/send?phone=9289280645" aria-label="Whatsapp" class="hover:text-orange-600">
+          <i class="fa-brands fa-whatsapp text-2xl"></i>
+        </a>
+      </div>   
+        </div>
+    </div>
+  </div>
+  <!-- Bottom Bar -->
+  <div class="border-t border-gray-700 mt-10 pt-6 text-center text-sm text-gray-400">
+    &copy; 2025 Gohra Technologies. All rights reserved.
+  </div>
+</footer>
 </body>
 </html>
