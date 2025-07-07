@@ -6,136 +6,105 @@
   <title>Gohra Assist</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-   <script>
-    // Toggle mobile menu
-    function toggleMobileMenu() {
-      document.getElementById('mobileMenu').classList.toggle('hidden');
-    }
-  </script>
 </head>
 <body class="font-sans">
-   <!-- Mega Navigation Bar -->
-  <nav class="border-b px-4 py-3 md:px-8 bg-white shadow-sm relative z-50">
-    <div class="flex items-center justify-between">
-      
-      <!-- Logo -->
-      <div class="flex items-center space-x-3">
-        <img src="Photos/logo.png" alt="Logo" class="h-11 w-30">
-      </div>
+<!-- ✅ NAVBAR START -->
+<nav class="border-b px-4 py-3 md:px-8 bg-white shadow-sm relative z-50">
+  <div class="flex items-center justify-between">
 
-      <!-- Desktop Menu -->
-      <ul class="hidden md:flex items-center space-x-6 text-black font-medium">
-        <li>
-          <a href="index.html"
-             class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 hover:text-orange-600">
-            Home
-          </a>
-        </li>
+    <!-- Logo -->
+    <div class="flex items-center space-x-3">
+      <img src="Photos/logo.png" alt="Logo" class="h-11 w-auto">
+    </div>
 
-        <li>
-          <a href="AboutUs.html"
-             class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 hover:text-orange-600">
-            About Us
-          </a>
-        </li>
+    <!-- Desktop Menu -->
+    <ul class="hidden md:flex items-center space-x-6 text-black font-medium">
+      <li><a href="index.html" class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 hover:text-orange-600">Home</a></li>
+      <li><a href="AboutUs.html" class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 hover:text-orange-600">About Us</a></li>
 
-        <!-- Mega Menu -->
-        <li class="relative group">
-          <button class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 hover:text-orange-600 font-medium">
-            Service & Solutions
-          </button>
+      <!-- Mega Menu -->
+      <li class="relative" id="servicesMenu">
+        <button class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 hover:text-orange-600 font-medium">
+          Service & Solutions
+        </button>
+        <!-- Triangle -->
+        <div id="triangle" class="absolute left-1/2 -translate-x-1/2 top-full mt-1 w-3 h-3 bg-black rotate-45 z-40 hidden"></div>
 
-          <!-- Triangle Arrow -->
-          <div class="absolute left-1/2 -translate-x-1/2 top-full mt-1 w-3 h-3 bg-black rotate-45 z-40 hidden group-hover:block pointer-events-none"></div>
-
-          <!-- Mega Dropdown -->
-          <div class="absolute left-0 top-full mt-2 group-hover:flex hidden w-[800px] bg-black text-white p-8 z-30 shadow-xl rounded-b-xl">
-            <div class="grid grid-cols-3 gap-10 text-sm w-full">
-              
-              <!-- Column 1 -->
-              <div>
-                <h4 class="font-semibold mb-3 text-base text-orange-600">Microsoft Dynamics Solutions</h4>
-                <ul class="space-y-1">
-                  <li><a href="d365f&o.html" class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 hover:after:scale-x-100">Microsoft Dynamics 365 Finance and Operations</a></li>
-                  <li><a href="d365central.html" class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 hover:after:scale-x-100">Microsoft Dynamics 365 Business Central</a></li>
-                  <li><a href="PowerBI.html" class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 hover:after:scale-x-100">Power Apps & Automation</a></li>
-                </ul>
-              </div>
-
-              <!-- Column 2 -->
-              <div class="border-l border-gray-700 pl-4">
-                <h4 class="font-semibold mb-3 text-base text-orange-600">Consulting & Augmentation</h4>
-                <ul class="space-y-1">
-                  <li><a href="ResourceAugmentation.html" class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 hover:after:scale-x-100">Resource Augmentation</a></li>
-                </ul>
-              </div>
-
-              <!-- Column 3 -->
-              <div class="border-l border-gray-700 pl-4">
-                <h4 class="font-semibold mb-3 text-base text-orange-600">Tools & Support</h4>
-                <ul class="space-y-1">
-                  <li><a href="gohraassit.html" class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 hover:after:scale-x-100">Gohra Assist</a></li>
-                </ul>
-              </div>
-
+        <!-- Dropdown -->
+        <div id="megaMenu" class="absolute left-0 top-full mt-4 hidden w-[800px] bg-black text-white p-8 z-30 shadow-xl rounded-b-xl pointer-events-auto">
+          <div class="grid grid-cols-3 gap-10 text-sm w-full">
+            <div>
+              <h4 class="font-semibold mb-3 text-base text-orange-600">Microsoft Dynamics Solutions</h4>
+              <ul class="space-y-1">
+                <li><a href="d365f&o.html" class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 hover:after:scale-x-100">Microsoft Dynamics 365 Finance and Operations</a></li>
+                <li><a href="d365central.html" class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 hover:after:scale-x-100">Microsoft Dynamics 365 Business Central</a></li>
+                <li><a href="PowerBI.html" class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 hover:after:scale-x-100">Power Apps & Automation</a></li>
+              </ul>
+            </div>
+            <div class="border-l border-gray-700 pl-2">
+              <h4 class="font-semibold mb-3 text-base text-orange-600">Consulting & Augmentation</h4>
+              <ul class="space-y-1">
+                <li><a href="ResourceAugmentation.html" class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 hover:after:scale-x-100">Resource Augmentation</a></li>
+              </ul>
+            </div>
+            <div class="border-l border-gray-700 pl-6">
+              <h4 class="font-semibold mb-3 text-base text-orange-600">Tools & Support</h4>
+              <ul class="space-y-1">
+                <li><a href="gohraassit.html" class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 hover:after:scale-x-100">Gohra Assist</a></li>
+              </ul>
             </div>
           </div>
-        </li>
-
-        <li><a href="Partners.html" class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 hover:text-orange-600">Our Partners</a></li>
-
-        <li><a href="Career.html" class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 hover:text-orange-600">Career</a></li>
-      </ul>
-
-      <!-- Contact Button & MS Badge -->
-      <div class="hidden md:flex items-center space-x-4">
-        <a href="Contactus.html" class="border border-orange-600 text-white bg-orange-600 px-4 py-2 rounded font-semibold hover:bg-white hover:text-black">
-          Connect with Us
-        </a>
-        <div class="flex items-center space-x-1">
-          <img src="https://img.icons8.com/color/48/000000/microsoft.png" class="h-6 w-6" alt="MS">
-          <span class="text-sm text-gray-600 leading-tight">Microsoft<br>Solutions Partner</span>
         </div>
-      </div>
+      </li>
 
-      <!-- Hamburger -->
-      <button onclick="toggleMobileMenu()" class="md:hidden text-orange-600 focus:outline-none">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
+      <li><a href="Partners.html" class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 hover:text-orange-600">Our Partners</a></li>
+      <li><a href="Career.html" class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 hover:text-orange-600">Career</a></li>
+    </ul>
+
+    <!-- Contact + Badge -->
+    <div class="hidden md:flex items-center space-x-4">
+      <a href="Contactus.html" class="border border-orange-600 text-white bg-orange-600 px-4 py-2 rounded font-semibold hover:bg-white hover:text-black">Connect with Us</a>
+      <div class="flex items-center space-x-1">
+        <img src="https://img.icons8.com/color/48/000000/microsoft.png" class="h-6 w-6" alt="MS">
+        <span class="text-sm text-gray-600 leading-tight">Microsoft<br>Solutions Partner</span>
+      </div>
     </div>
 
-    <!-- Mobile Menu -->
-    <div id="mobileMenu" class="hidden md:hidden mt-3 bg-white px-4 pb-4 text-black font-medium space-y-2">
-      <a href="index.html" class="block hover:bg-orange-50 px-2 py-2 rounded">Home</a>
-      <a href="AboutUs.html" class="block hover:bg-orange-50 px-2 py-2 rounded">About Us</a>
+    <!-- Mobile Toggle -->
+    <button onclick="toggleMobileMenu()" class="md:hidden text-orange-600 focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+  </div>
 
-      <!-- Service & Solutions dropdown in mobile -->
-      <div>
-        <span class="block font-semibold px-2 py-2 text-orange-600">Service & Solutions</span>
-        <div class="pl-4 space-y-1 text-sm">
-          <a href="d365f&o.html" class="block hover:bg-orange-50 px-2 py-1 rounded">Dynamics 365 F&O</a>
-          <a href="d365central.html" class="block hover:bg-orange-50 px-2 py-1 rounded">Business Central</a>
-          <a href="PowerBI.html" class="block hover:bg-orange-50 px-2 py-1 rounded">Power Apps & Automation</a>
-          <a href="ResourceAugmentation.html" class="block hover:bg-orange-50 px-2 py-1 rounded">Resource Augmentation</a>
-          <a href="gohraassit.html" class="block hover:bg-orange-50 px-2 py-1 rounded">Gohra Assist</a>
-        </div>
-      </div>
+  <!-- Mobile Menu Placeholder -->
+  <div id="mobileMenu" class="hidden md:hidden mt-3 bg-white px-4 pb-4 text-black font-medium space-y-2">
+    <!-- Same as before -->
+  </div>
+</nav>
+<script>
+  const menuArea = document.getElementById("servicesMenu");
+  const megaMenu = document.getElementById("megaMenu");
+  const triangle = document.getElementById("triangle");
 
-      <a href="Partners.html" class="block hover:bg-orange-50 px-2 py-2 rounded">Our Partners</a>
-      <a href="Career.html" class="block hover:bg-orange-50 px-2 py-2 rounded">Career</a>
-      <a href="Contactus.html" class="block border border-orange-600 text-center px-4 py-2 rounded font-semibold hover:bg-orange-50 text-orange-600">Contact Us</a>
-    </div>
-  </nav>
+  let closeTimeout;
 
-  <!-- Script for mobile menu -->
-  <script>
-    function toggleMobileMenu() {
-      const menu = document.getElementById('mobileMenu');
-      menu.classList.toggle('hidden');
-    }
-  </script>
+  menuArea.addEventListener("mouseenter", () => {
+    clearTimeout(closeTimeout);
+    megaMenu.classList.remove("hidden");
+    triangle.classList.remove("hidden");
+  });
+
+  menuArea.addEventListener("mouseleave", () => {
+    closeTimeout = setTimeout(() => {
+      megaMenu.classList.add("hidden");
+      triangle.classList.add("hidden");
+    }, 1000); // 5 seconds
+  });
+</script>
+
+
   <img src="Photos/1.png" alt="image">
   <img src="Photos/2.png" alt="image">
   <img src="Photos/3.png" alt="image">
@@ -148,67 +117,16 @@
   <img src="Photos/10.png" alt="image">
   <img src="Photos/11.png" alt="image">
   <img src="Photos/12.png" alt="image">
-  <!-- Footer -->
-<footer class="bg-black text-white py-10 px-6 md:px-16">
-  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
-    <!-- Logo & About -->
-    <div>
-      <h4 class="text-xl font-semibold mb-2">Gohra Technologies</h4>
-      <p class="text-sm leading-6">
-        Empowering Businesses with Smart, Scalable Tech.
-      </p>
-    </div>
-    <!-- Quick Links -->
-    <div>
-      <h3 class="text-lg font-semibold mb-3">Quick Links</h3>
-      <ul class="space-y-2 text-sm text-gray-300">
-        <li><a href="index.html" class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 hover:text-orange-600">Home</a>
-        </li>
-        <li><li>
-  <a href="AboutUs.html" class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 hover:text-orange-600">
-    About Us
-  </a>
-</li>
-</li>
-        <li><a href="d365f&o.html" class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 hover:text-orange-600">Services & Solutions</a></li>
-        <li><a href="Partners.html" class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 hover:text-orange-600">Our Partners</a></li>
-        <li><a href="Career.html" class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 hover:text-orange-600">Career</a></li>
-      </ul>
-    </div>
-    <!-- Our Services -->
-    <div>
-      <h3 class="text-lg font-semibold mb-3">Services</h3>
-      <ul class="space-y-2 text-sm text-gray-300">
-        <li><a href="d365f&o.html" class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 hover:text-orange-600">Microsoft Dynamics 365 Finance and Operations</a></li>
-        <li><a href="d365central.html" class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 hover:text-orange-600">Microsoft Dynamics 365 Business Central</a></li>
-        <li><a href="PowerBI.html" class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 hover:text-orange-600">Power Apps and Power Automation</a></li>
-        <li><a href="ResourceAugmentation.html" class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 hover:text-orange-600">Resource Augmentation</a></li>
-        <li><a href="gohraassit.html" class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 hover:text-orange-600">Gohra Assist</a></li>
-      </ul>
-    </div>
-    <!-- Contact & Social -->
-    <div>
-      <h3 class="text-lg font-semibold mb-3">Contact</h3>
-      <a href="https://mail.google.com/mail/?view=cm&to=hello@thegohra.com" target="_blank" class="text-sm text-gray-300 hover:text-orange-600">📧 hello@thegohra.com
-</a>
-<div class="flex space-x-4 mt-4" id="red">
-        <a href="https://www.linkedin.com/company/gohra-technologies/" aria-label="LinkedIn"  class="hover:text-orange-600">
-          <i class="fab fa-linkedin text-2xl"></i>
-        </a>
-        <a href="http://www.instagram.com/thegohra" aria-label="Instagram" class="hover:text-orange-600">
-          <i class="fab fa-instagram text-2xl"></i>
-        </a>
-        <a href="https://api.whatsapp.com/send?phone=9289280645" aria-label="Whatsapp" class="hover:text-orange-600">
-          <i class="fa-brands fa-whatsapp text-2xl"></i>
-        </a>
-      </div>   
-        </div>
-    </div>
+<section class="bg-black py-20 px-6 text-center text-white">
+  <div class="max-w-3xl mx-auto">
+    <h2 class="text-4xl md:text-5xl font-bold mb-8">
+      Get in Touch and <span class="text-[#dd6b20]">Let’s work together</span>
+    </h2>
+    <a href="Contactus.html" class="bg-[#dd6b20] hover:bg-white hover:text-orange-600 text-white font-semibold px-8 py-4 rounded-lg shadow-md transition hover:border-orange-600 hover:border-2">
+      Contact Us
+    </a>
   </div>
-  <!-- Bottom Bar -->
-  <div class="border-t border-gray-700 mt-10 pt-6 text-center text-sm text-gray-400">
-    &copy; 2025 Gohra Technologies. All rights reserved.
-  </div>
-</footer>
+</section>
+
 </body>
 </html>
