@@ -79,8 +79,30 @@
   </div>
 
   <!-- Mobile Menu Placeholder -->
-  <div id="mobileMenu" class="hidden md:hidden mt-3 bg-white px-4 pb-4 text-black font-medium space-y-2">
-    <!-- Same as before -->
+<!-- Mobile Menu Placeholder -->
+ <div id="mobileMenu" class="hidden md:hidden mt-3 bg-white px-4 pb-4 text-black font-medium space-y-2" x-data="{ open: false }">
+    <a href="index.html" class="block hover:bg-orange-50 px-2 py-2 rounded">Home</a>
+    <a href="AboutUs.html" class="block hover:bg-orange-50 px-2 py-2 rounded">About Us</a>
+    <!-- Service & Solutions dropdown -->
+    <div class="relative">
+      <button @click="open = !open" class="w-full text-left px-2 py-2 rounded hover:bg-orange-50 flex justify-between items-center">
+        Service & Solutions
+        <svg class="w-4 h-4 transform transition-transform" :class="open ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+      <div x-show="open" class="mt-2 space-y-1 pl-4 text-sm">
+        <a href="d365f&o.html" class="block hover:bg-orange-50 px-2 py-1 rounded">Dynamics 365 F&O</a>
+        <a href="d365central.html" class="block hover:bg-orange-50 px-2 py-1 rounded">Microsoft Dynamics 365 Business Central</a>
+        <a href="PowerBI.html" class="block hover:bg-orange-50 px-2 py-1 rounded">Power Apps & Automation</a>
+        <a href="ResourceAugmentation.html" class="block hover:bg-orange-50 px-2 py-1 rounded">Resource Augmentation</a>
+        <a href="gohraassit.html" class="block hover:bg-orange-50 px-2 py-1 rounded">Gohra Assist</a>
+      </div>
+    </div>
+
+    <a href="Partners.html" class="block hover:bg-orange-50 px-2 py-2 rounded">Our Partners</a>
+    <a href="Career.html" class="block hover:bg-orange-50 px-2 py-2 rounded">Career</a>
+    <a href="Contactus.html" class="block border border-orange-600 text-center px-4 py-2 rounded font-semibold hover:bg-orange-50 text-orange-600">Contact Us</a>
   </div>
 </nav>
 <script>

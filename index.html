@@ -9,9 +9,12 @@
    <script src="https://unpkg.com/alpinejs" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <style>
-
-  </style>
+   <script>
+    // Toggle mobile menu
+    function toggleMobileMenu() {
+      document.getElementById('mobileMenu').classList.toggle('hidden');
+    }
+  </script>
 </head>
 <body class="font-sans">
 <!-- ✅ NAVBAR START -->
@@ -62,11 +65,9 @@
           </div>
         </div>
       </li>
-
       <li><a href="Partners.html" class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 hover:text-orange-600">Our Partners</a></li>
       <li><a href="Career.html" class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 hover:text-orange-600">Career</a></li>
     </ul>
-
     <!-- Contact + Badge -->
     <div class="hidden md:flex items-center space-x-4">
       <a href="Contactus.html" class="border border-orange-600 text-white bg-orange-600 px-4 py-2 rounded font-semibold hover:bg-white hover:text-black">Connect with Us</a>
