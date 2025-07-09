@@ -6,6 +6,10 @@
   <title>Our Success | Gohra Technologies</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/alpinejs" defer></script>
+    <style>
+    .hidden-section { display: none; 
+    }
+  </style>
   <script>
     // Toggle mobile menu
     function toggleMobileMenu() {
@@ -63,7 +67,7 @@
         </div>
       </li>
 
-      <li><a href="Partners.html" class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 hover:text-orange-600">Our Partners</a></li>
+      <li><a href="Partners.html" class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 hover:text-orange-600">Our Success</a></li>
       <li><a href="Career.html" class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 hover:text-orange-600">Career</a></li>
     </ul>
 
@@ -106,7 +110,7 @@
       </div>
     </div>
 
-    <a href="Partners.html" class="block hover:bg-orange-50 px-2 py-2 rounded">Our Partners</a>
+    <a href="Partners.html" class="block hover:bg-orange-50 px-2 py-2 rounded">Our Success</a>
     <a href="Career.html" class="block hover:bg-orange-50 px-2 py-2 rounded">Career</a>
     <a href="Contactus.html" class="block border border-orange-600 text-center px-4 py-2 rounded font-semibold hover:bg-orange-50 text-orange-600">Contact Us</a>
   </div>
@@ -169,59 +173,206 @@
   </section>
 
   <!-- Client Showcase Without Tiles -->
-  <section class="bg-white py-20 px-6 md:px-12">
-    <h2 class="text-4xl font-bold text-center mb-16">Our Clientele</h2>
-    <div class="max-w-5xl mx-auto space-y-16">
-
-      <div class="flex flex-col md:flex-row items-center gap-8">
-        <img src="Photos/logo_1.png" alt="Prabhu Ji Logo" class="h-20 w-auto">
-        <div>
-          <h3 class="text-2xl font-bold text-orange-600">Prabhu Ji (House of Haldiram’s)</h3>
-          <p class="text-gray-700 mt-2">The name “Prabhuji” is symbolic of joy and taste in the purest form. They can trace the origins of their legacy to Mr. Prabhu Shankar Agarwal. The founder of a successful company that offered Indian households the widest selection of snacks.</p>
-          <p class="text-gray-700 mt-2">Using Microsoft Dynamics Ax 2012, Gohra Technologies handled all new customization, automation of different processes, customization in different modules, integration with different third party tools like EDI.</p>
-        </div>
-      </div>
-
-      <div class="flex flex-col md:flex-row items-center gap-8">
-        <img src="Photos/logo_2.jpg" alt="National Oil Ethiopia Logo" class="h-20 w-auto">
-        <div>
-          <h3 class="text-2xl font-bold text-orange-600">National Oil Ethiopia Plc</h3>
-          <p class="text-gray-700 mt-2">National Oil Ethiopia (NOC) Plc is the first indigenous major oil marketer of petroleum products with a wide network of modern service stations strategically located across the country. They focus and continuously strive to improve their product and service offerings and expand their business operations in Ethiopia and other Countries in Africa.</p>
-          <p class="text-gray-700 mt-2">Established in April 2004, National Oil Ethiopia Plc (NOC) is registering a sterling growth in the marketing of petroleum products in the Country. Their extraordinary achievements within these years is a testimony of our passion and commitment in what we do and demonstrates that the company is gaining momentum for further growth.</p>
-          <p class="text-gray-700 mt-2">Using Microsoft Dynamics 365 F&O where Gohra Technologies implemented Supply Chain Management module for managing their operations.</p>
-        </div>
-      </div>
-
-      <div class="flex flex-col md:flex-row items-center gap-8">
-        <img src="Photos/logo_3.png" alt="Prime Line Logo" class="h-6 w-auto">
-        <div>
-          <h3 class="text-2xl font-bold text-orange-600">Prime Line (UK)</h3>
-          <p class="text-gray-700 mt-2">Prime line Sales & Marketing partners with both the most-established and fastest-emerging food, drinks and household brands in the UK and Ireland. Their unrivalled experience has given us an exclusive insight into how these businesses work.</p>
-          <p class="text-gray-700 mt">Using Microsoft Dynamics 365 F&O where Gohra Technologies handled implementation of different modules and integration with third party tools like SAP.</p>
-        </div>
-      </div>
-
-      <div class="flex flex-col md:flex-row items-center gap-8">
-        <img src="Photos/logo_4.png"  class="h-16 w-auto">
-        <div>
-          <h3 class="text-2xl font-bold text-orange-600">ED&F Man (UK & PNG)</h3>
-          <p class="tex-gray-700 mt-2">ED&F Man Commodities is one of the world’s leading providers of soft commodities and logistics including sugar, coffee, molasses, animal feeds and fish oil.</p>
-          <p class="text-gray-700 mt-2">Using Microsoft Dynamics Ax 2012 where Gohra Technologies handles automation of different standard processes, reporting and customization.</p>
-        </div>
-      </div>
-
-      <div class="flex flex-col md:flex-row items-center gap-8">
-        <img src="Photos/logo_5.png" alt="U.S. Venture Logo" class="h-16 w-auto">
-        <div>
-          <h3 class="text-2xl font-bold text-orange-600">U.S. Venture</h3>
-          <p class="text-gray-700 mt-2">For over 70 years, U.S. Venture, Inc. has been recognized as an innovative leader in the distribution of renewable and traditional energy products, lubricants, tires, parts, and using data-driven insights to manage energy and information in the global movement of goods. U.S. Venture delivers creative, sustainable solutions that give their customers a competitive edge, and enable the company to support the communities in which they live, work, and play.</p>
-          <p class="text-gray-700 mt-2">Using Microsoft Dynamics 365 F&O where Gohra Technologies handled support - Customization  in different modules, bug fixes etc.</p>
-        </div>
-      </div>
-
+   <section class="bg-black text-white py-20 px-6 text-center">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-5xl font-bold mb-4 text-orange-600">Case Studies</h1>
+      <p class="text-lg">From bottlenecks to breakthroughs — discover how Gohra Technologies empowers industries through smart Dynamics 365 solutions.</p>
     </div>
   </section>
+   
+   <section class="p-10 mb-4 cursor-pointer">
+  <div id="tileContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+    <div class="bg-white text-gray-900 p-6 rounded-2xl shadow-md hover:shadow-xl transition-all">
+      <h2 class="text-xl font-semibold mb-4 leading-snug">Managing Operations of Food and Beverage Industry with Microsoft Dynamics Ax</h2>
+      <button onclick="showDetails('tile1')" class="text-sm text-orange-600 font-medium hover:underline">Explore More →</button>
+    </div>
+    <div class="bg-white text-gray-900 p-6 rounded-2xl shadow-md hover:shadow-xl transition-all">
+      <h2 class="text-xl font-semibold mb-4 leading-snug">Optimizing Oil and Gas Industry Manufacturing Operations with Microsoft Dynamics 365 Finance and Operations</h2>
+      <button onclick="showDetails('tile2')" class="text-sm text-orange-600 font-medium hover:underline">Explore More →</button>
+    </div>
+    <div class="bg-white text-gray-900 p-6 rounded-2xl shadow-md hover:shadow-xl transition-all">
+      <h2 class="text-xl font-semibold mb-4 leading-snug">Streamlining Marketing and Sales Processes Using Microsoft Dynamics 365 Finance and Operations</h2>
+      <button onclick="showDetails('tile3')" class="text-sm text-orange-600 font-medium hover:underline">Explore More →</button>
+    </div>
+    <div class="bg-white text-gray-900 p-6 rounded-2xl shadow-md hover:shadow-xl transition-all">
+      <h2 class="text-xl font-semibold mb-4 leading-snug">Dashboard and Reporting of Logistic & Distribution Company Using Microsoft Dynamics Ax</h2>
+      <button onclick="showDetails('tile4')" class="text-sm text-orange-600 font-medium hover:underline">Explore More →</button>
+    </div>
+    <div class="bg-white text-gray-900 p-6 rounded-2xl shadow-md hover:shadow-xl transition-all">
+      <h2 class="text-xl font-semibold mb-4 leading-snug">Dynamics 365 in Energy and Renewable Industry</h2>
+      <button onclick="showDetails('tile5')" class="text-sm text-orange-600 font-medium hover:underline">Explore More →</button>
+    </div>
+    <div class="bg-white text-gray-900 p-6 rounded-2xl shadow-md hover:shadow-xl transition-all">
+      <h2 class="text-xl font-semibold mb-4 leading-snug">Dynamics 365 in Manufacturing Industry</h2>
+      <button onclick="showDetails('tile6')" class="text-sm text-orange-600 font-medium hover:underline">Explore More →</button>
+    </div>
+    <div class="bg-white text-gray-900 p-6 rounded-2xl shadow-md hover:shadow-xl transition-all">
+      <h2 class="text-xl font-semibold mb-4 leading-snug">Dynamics 365 ERP Support Project</h2>
+      <button onclick="showDetails('tile7')" class="text-sm text-orange-600 font-medium hover:underline">Explore More →</button>
+    </div>
+    <div class="bg-white text-gray-900 p-6 rounded-2xl shadow-md hover:shadow-xl transition-all">
+      <h2 class="text-xl font-semibold mb-4 leading-snug">Dynamics 365 ERP Upgrade Project</h2>
+      <button onclick="showDetails('tile8')" class="text-sm text-orange-600 font-medium hover:underline">Explore More →</button>
+    </div>
+  </div>
+    <div id="detailContainer" class="hidden">
+    <div id="tile1" class="hidden-section bg-white p-6 rounded-xl shadow-md border-2 border-orange-600" >
+      <h2 class="text-2xl font-bold text-gray-800 mb-4">Managing Operations of Food and Beverage Industry with Microsoft Dynamics Ax</h2>
+      <p class="mb-4">One of the renowned name in the food and beverage industry have implemented Microsoft Dynamics Ax ERP to transformed their business operations from the ground up. In an industry where product freshness, traceability, and inventory turnover are critical, Microsoft Dynamics Ax helped them gain complete visibility across our supply chain.</p>
+      <p class="mb-4">Gohra Technologies handled all new customization, automation of different processes, customization in different modules, integration with different third party tools like EDI.</p>
+      <strong>Business Challenge</strong>
+      <p class="mb-4">They faced several challenges across its operations. Disparate legacy systems managing finance, inventory, and production.</p>
+      <ul class="list-disc pl-5 mb-4 text-gray-700">
+        <li>Lack of real-time visibility into inventory and production workflows.</li>
+        <li>Manual financial consolidation, causing delays in reporting and compliance.</li>
+        <li>Limited scalability to support new product lines and global expansion.</li>
+        <li>The leadership sought a modern ERP solution to streamline operations, improve decision-making, and support their growth strategy.</li>
+      </ul>
+      <p class="mb-4">With Microsoft Dynamics Ax, Customer not only optimized their operations but also laid the digital foundation for scalable and intelligent process.</p>
+      <button onclick="goBack()" class="bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700">← Back</button>
+    </div>
 
+    <div id="tile2" class="hidden-section bg-white p-6 rounded-xl shadow-md border-2 border-orange-600">
+      <h2 class="text-2xl font-bold text-gray-800 mb-4">Optimizing Oil and Gas Industry Manufacturing Operations with Microsoft Dynamics 365 Finance and Operations</h2>
+      <p class="mb-4">Indigenous major oil marketer of petroleum products with a wide network of modern service stations strategically located across the country. They focus and continuously strive to improve their product and service offerings and expand their business operations in Ethiopia and other Countries in Africa.</p>
+      <p class="mb-4">Gohra Technologies implemented Supply Chain Management module of Microsoft Dynamics 365 Finance and Operations for managing their operations.</p>
+      <strong>Key Benefits & Results</strong>
+      <ul class="list-disc pl-5 mb-4 text-gray-700">
+        <li>Improved Operational Efficiency</li>
+        <ul class="list-[square]  pl-5 mt-1">
+          <li>Reduction in production delays due to better demand forecasting </li>
+          <li>Improvement in on-time order fulfilment</li>
+        </ul>
+        <li>Enhanced Financial Visibility</li>
+        <ul class="list-[square] pl-5 mt-1">
+          <li>Real-time insights into cash flow and budgets</li>
+          <li>Automated month-end closing</li>
+        </ul>
+        <li>Scalability & Flexibility</li>
+        <ul class="list-[square] pl-5 mt-1">
+          <li>Enabled multi-country operations with local compliance support</li>
+          <li>Seamless on boarding of two new product lines without additional systems</li>
+        </ul>
+        <li>User Empowerment</li>
+        <ul class="list-[square] pl-5 mt-1">
+          <li>Role-based dashboards for executives, plant managers, and procurement teams</li>
+          <li>Mobile access to ERP modules</li>
+        </ul>
+      </ul>
+      <button onclick="goBack()" class="bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700">← Back</button>
+    </div>
+
+    <div id="tile3" class="hidden-section bg-white p-6 rounded-xl shadow-md">
+      <h2 class="text-2xl font-bold text-gray-800 mb-4">Streamlining Marketing and Sales Processes Using Microsoft Dynamics 365 Finance and Operations</h2>
+      <p class="mb-4">Our Customer is Sales & Marketing partners with both the most-established and fastest-emerging food, drinks and household brands in the UK and Ireland. Their unrivalled experience has given us an exclusive insight into how these businesses work.</p>
+      <p class="mb-4">Gohra Technologies handled implementation of Microsoft Dynamics 365 Finance and Operations different modules and integration with third party tools like SAP.</p>
+      <strong>Challenges Faced</strong>
+      <ul class="list-disc pl-5 mb-4 text-gray-700">
+        <li>Disconnected systems between marketing, finance, and procurement</li>
+        <li>Complex billing structures for client campaigns</li>
+        <li>Lack of real-time insights into budget utilization and ROI</li>
+        <li>Manual reconciliation across global teams</li>
+      </ul>
+      <strong>After Implementation of Microsoft Dynamics 365 Finance and Operations</strong>
+      <ul class="list-disc pl-5 text-gray-700 mb-4">
+  <li>Improvement in financial reporting accuracy</li>
+  <li>Faster campaign budget approvals</li>
+  <li>Reduced DSO (Days Sales Outstanding)</li>
+  <li>Higher ROI visibility by linking financials with ERP</li>
+</ul>
+      <button onclick="goBack()" class="bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700">← Back</button>
+    </div>
+
+    <div id="tile4" class="hidden-section bg-white p-6 rounded-xl shadow-md">
+      <h2 class="text-2xl font-bold text-gray-800 mb-4">Dashboard and Reporting of Logistic & Distribution Company Using Microsoft Dynamics Ax</h2>
+      <p class="mb-4">One of the world’s leading providers of soft commodities and logistics including sugar, coffee, molasses, animal feeds and fish oil.</p>
+      <p class="mb-4">Gohra Technologies handles automation of different standard processes, reporting and customization using Microsoft Dynamics Ax 2012</p>
+      <strong>Business Challenges</strong>
+      <ul class="list-disc pl-5 mb-4 text-gray-700">
+        <li>Disconnected systems across procurement, inventory, transportation, and finance</li>
+        <li>Inaccurate demand planning and excess inventory</li>
+        <li>Slow response time to customer and supplier issues</li>
+        <li>Manual reporting leading to operational inefficiencies</li>
+      </ul>
+      <strong>Benefits Achieved with Dynamics 365 F&O</strong>
+      <ul class="list-disc pl-5 text-gray-700 mb-4">
+  <li>Unified platform for supply chain, finance, and operations</li>
+  <li>Real-time visibility into inventory, shipments, and supplier performance</li>
+  <li>Improved demand forecasting using AI and analytics</li>
+  <li>Faster procurement and reduced stock outs</li>
+  <li>Enhanced collaboration across global teams</li>
+  <li>Scalable solution for global expansion</li>
+</ul>
+
+      <button onclick="goBack()" class="bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700">← Back</button>
+    </div>
+
+    <div id="tile5" class="hidden-section bg-white p-6 rounded-xl shadow-md">
+      <h2 class="text-2xl font-bold text-gray-800 mb-4">Dynamics 365 in Energy and Renewable Industry</h2>
+      <p class="mb-4">Support and customization of Dynamics 365 F&O for a company distributing renewable and traditional energy products.</p>
+      <ul class="list-disc pl-5 mb-4 text-gray-700">
+        <li>Fragmented legacy systems</li>
+        <li>Delayed consolidation and integration</li>
+        <li>Improved compliance and audit readiness</li>
+        <li>Real-time expenditure visibility</li>
+      </ul>
+      <button onclick="goBack()" class="bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700">← Back</button>
+    </div>
+
+    <div id="tile6" class="hidden-section bg-white p-6 rounded-xl shadow-md">
+      <h2 class="text-2xl font-bold text-gray-800 mb-4">Dynamics 365 in Manufacturing Industry</h2>
+      <p class="mb-4">Deployed D365 Finance, Supply Chain, Power BI, and Azure for a packaging manufacturer over 8 months.</p>
+      <ul class="list-disc pl-5 mb-4 text-gray-700">
+        <li>Disparate legacy systems</li>
+        <li>Real-time inventory and production control</li>
+        <li>Cloud scalability and secure hosting</li>
+        <li>Interactive analytics with Power BI</li>
+      </ul>
+      <button onclick="goBack()" class="bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700">← Back</button>
+    </div>
+
+    <div id="tile7" class="hidden-section bg-white p-6 rounded-xl shadow-md">
+      <h2 class="text-2xl font-bold text-gray-800 mb-4">Dynamics 365 ERP Support Project</h2>
+      <p class="mb-4">Post-implementation support for an F&B company to address performance and integration issues.</p>
+      <ul class="list-disc pl-5 mb-4 text-gray-700">
+        <li>40% reduction in system downtime</li>
+        <li>Improved user training and knowledge base</li>
+        <li>Proactive monitoring and faster resolutions</li>
+        <li>Streamlined month-end closing</li>
+      </ul>
+      <button onclick="goBack()" class="bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700">← Back</button>
+    </div>
+
+    <div id="tile8" class="hidden-section bg-white p-6 rounded-xl shadow-md">
+      <h2 class="text-2xl font-bold text-gray-800 mb-4">Dynamics 365 ERP Upgrade Project</h2>
+      <p class="mb-4">Upgrade from Microsoft Dynamics Ax to Dynamics 365 F&O for a cardboard manufacturer.</p>
+      <ul class="list-disc pl-5 mb-4 text-gray-700">
+        <li>Enhanced system performance and scalability</li>
+        <li>Real-time analytics and improved UX</li>
+        <li>Seamless data migration and user training</li>
+        <li>Modernized financial, supply chain, and procurement ops</li>
+      </ul>
+      <button onclick="goBack()" class="bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700">← Back</button>
+    </div>
+  </div>
+
+  <script>
+    function showDetails(id) {
+      document.getElementById('tileContainer').classList.add('hidden');
+      document.getElementById('detailContainer').classList.remove('hidden');
+
+      const sections = document.querySelectorAll('#detailContainer > div');
+      sections.forEach(section => section.classList.add('hidden-section'));
+
+      document.getElementById(id).classList.remove('hidden-section');
+    }
+
+    function goBack() {
+      document.getElementById('tileContainer').classList.remove('hidden');
+      document.getElementById('detailContainer').classList.add('hidden');
+    }
+  </script>
+</section>
   <!-- Footer CTA -->
   <section class="bg-black py-12 text-white text-center mb-4">
     <h3 class="text-3xl font-semibold mb-2">Let’s Build Your Success Story</h3>
@@ -254,7 +405,7 @@
 </li>
 </li>
         <li><a href="d365f&o.html" class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 hover:text-orange-600">Services & Solutions</a></li>
-        <li><a href="Partners.html" class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 hover:text-orange-600">Our Partners</a></li>
+        <li><a href="Partners.html" class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 hover:text-orange-600">Our Success</a></li>
         <li><a href="Career.html" class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 hover:text-orange-600">Career</a></li>
          <li><a href="Privacy.html" class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#dd6b20] after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100 hover:text-orange-600">Privacy & Cookies Policy</a></li>
       </ul>
