@@ -155,54 +155,161 @@
   </section>
 
   <!-- Job Openings -->
-  <section class="py-20 px-6 max-w-7xl mx-auto cursor-pointer">
-    <h2 class="text-3xl font-bold text-center mb-12 fade-up">Current Openings</h2>
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+<section class="py-20 px-6 max-w-7xl mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-12">Current Openings</h2>
 
-      <!-- Job Card -->
-      <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition fade-up">
+    <!-- Job Cards -->
+    <div id="job-list" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      <!-- Job 1 -->
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition cursor-pointer" onclick="showJobDetail('job1')">
         <div class="mb-4 text-orange-600">
           <svg class="w-10 h-10 mx-auto" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M9 17v-2a4 4 0 014-4h2a4 4 0 014 4v2" />
           </svg>
         </div>
-        <h3 class="text-xl font-semibold text-center mb-2">D365 F&O Developer</h3>
-        <p class="text-center text-gray-600 mb-4">2+ years of experience | X++, AOT, SSRS</p>
+        <h3 class="text-xl font-semibold text-center mb-2">D365 F&O Technical Consultant</h3>
+        <p class="text-center text-gray-600 mb-4">6+ years experience | X++, AOT, SSRS</p>
         <div class="text-center">
-          <a href="https://mail.google.com/mail/?view=cm&to=hr@thegohra.com" target="_blank" class="inline-block bg-orange-600 text-white px-6 py-2 rounded-full hover:bg-black  transition">Apply Now</a>
+          <span class="inline-block bg-orange-600 text-white px-6 py-2 rounded-full hover:bg-black transition">View Details</span>
         </div>
       </div>
 
-      <!-- Another Job -->
-      <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition fade-up">
+      <!-- Job 2 -->
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition cursor-pointer" onclick="showJobDetail('job2')">
         <div class="mb-4 text-orange-600">
           <svg class="w-10 h-10 mx-auto" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
           </svg>
         </div>
-        <h3 class="text-xl font-semibold text-center mb-2">Frontend Developer</h3>
-        <p class="text-center text-gray-600 mb-4">ReactJS + Tailwind CSS | UI Enthusiast</p>
+        <h3 class="text-xl font-semibold text-center mb-2">D365 F&O Functional Consultant</h3>
+        <p class="text-center text-gray-600 mb-4">Finance / SCM Modules</p>
         <div class="text-center">
-          <a href="https://mail.google.com/mail/?view=cm&to=hr@thegohra.com" target="_blank" class="inline-block bg-orange-600 text-white px-6 py-2 rounded-full hover:bg-black transition">Apply Now</a>
+          <span class="inline-block bg-orange-600 text-white px-6 py-2 rounded-full hover:bg-black transition">View Details</span>
         </div>
       </div>
 
-      <!-- Another Job -->
-      <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition fade-up">
+      <!-- Job 3 -->
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition cursor-pointer" onclick="showJobDetail('job3')">
         <div class="mb-4 text-orange-600">
           <svg class="w-10 h-10 mx-auto" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3" />
           </svg>
         </div>
-        <h3 class="text-xl font-semibold text-center mb-2">ERP Functional Consultant</h3>
-        <p class="text-center text-gray-600 mb-4">Strong business process understanding</p>
+        <h3 class="text-xl font-semibold text-center mb-2">Techno-Functional Consultant</h3>
+        <p class="text-center text-gray-600 mb-4">X++, Power Platform, UAT</p>
         <div class="text-center">
-          <a href="https://mail.google.com/mail/?view=cm&to=hr@thegohra.com" target="_blank" class="inline-block bg-orange-600 text-white px-6 py-2 rounded-full hover:bg-black transition">Apply Now</a>
+          <span class="inline-block bg-orange-600 text-white px-6 py-2 rounded-full hover:bg-black transition">View Details</span>
         </div>
       </div>
+    </div>
 
+    <!-- Job Details Section -->
+    <div id="job-detail" class="hidden mt-10 bg-white p-8 rounded-xl shadow-lg">
+      <h3 id="job-title" class="text-2xl font-bold mb-4 text-orange-600"></h3>
+      <div id="job-description" class="text-gray-700 mb-6 text-sm leading-relaxed space-y-2"></div>
+      <div class="flex flex-col sm:flex-row items-center gap-4">
+        <a href="https://mail.google.com/mail/?view=cm&to=hr@thegohra.com" class="bg-orange-600 text-white px-6 py-2 rounded-full hover:bg-black transition">Apply Now</a>
+        <button onclick="goBack()" class="border border-orange-600 text-orange-600 px-6 py-2 rounded-full hover:bg-orange-100 transition">← Back to Openings</button>
+      </div>
     </div>
   </section>
+
+  <!-- JavaScript -->
+  <script>
+    const jobData = {
+      job1: {
+        title: "Microsoft Dynamics 365 (Finance & Operation) Technical Consultant",
+        description: `
+          <p>We are looking for an experienced Microsoft Dynamics 365 AX Technical Consultant with strong expertise in Dynamics AX 2012 and Dynamics 365 Finance and Operations (FinOps).</p>
+          <strong>Responsibilities:</strong>
+          <ul class="list-disc list-inside">
+            <li>Customize and extend Microsoft Dynamics 365 FinOps / AX 2012 based on business requirements.</li>
+            <li>Design and develop Data Tables, Views, Queries, and User Interfaces.</li>
+            <li>Develop and customize SSRS reports.</li>
+            <li>Work with AIF, Security Framework, and Workflow features.</li>
+            <li>Leverage Power Apps, Power Automate, and Power BI.</li>
+            <li>Use Azure DevOps for version control and deployments.</li>
+            <li>Collaborate with functional teams to meet requirements.</li>
+            <li>Optional: C#, .NET, AngularJS, Node.js, HTML.</li>
+          </ul>
+          <strong>Preferred Qualifications:</strong>
+          <ul class="list-disc list-inside">
+            <li>Microsoft Certification in D365 / Power Platform.</li>
+            <li>Excellent communication and interpersonal skills.</li>
+          </ul>
+          <strong>Skills and Competencies:</strong>
+          <ul class="list-disc list-inside">
+            <li>Strong analytical skills, self-motivated, result-oriented.</li>
+            <li>Ability to work independently or in a team.</li>
+          </ul>
+        `
+      },
+      job2: {
+        title: "Microsoft Dynamics 365 (Finance and Operations) Functional Consultant",
+        description: `
+          <p>We are seeking a skilled and experienced D365 F&O Functional Consultant with strong expertise in finance or supply chain modules.</p>
+          <strong>Responsibilities:</strong>
+          <ul class="list-disc list-inside">
+            <li>Analyze business requirements and translate into D365 F&O solutions.</li>
+            <li>Configure core modules: GL, AP, AR, FA, Inventory, Sales, Procurement.</li>
+            <li>Facilitate requirement gathering, gap analysis, UAT, and training.</li>
+            <li>Support deployments and post-implementation issues.</li>
+          </ul>
+          <strong>Preferred Qualifications:</strong>
+          <ul class="list-disc list-inside">
+            <li>Experience with D365 or AX 2012, Microsoft Certification.</li>
+            <li>Knowledge of Power Platform and DMF, Dual Write, ER.</li>
+          </ul>
+          <strong>Skills and Competencies:</strong>
+          <ul class="list-disc list-inside">
+            <li>Excellent problem-solving and communication skills.</li>
+            <li>Ability to manage multiple tasks and meet deadlines.</li>
+          </ul>
+        `
+      },
+      job3: {
+        title: "Microsoft Dynamics 365 (Finance and Operations) Techno-Functional Consultant",
+        description: `
+          <p>We are looking for a D365 F&O Techno-Functional Consultant with deep functional knowledge and hands-on technical experience.</p>
+          <strong>Responsibilities:</strong>
+          <ul class="list-disc list-inside">
+            <li>Gather business requirements and translate into technical specs.</li>
+            <li>Configure modules and develop custom solutions (entities, workflows, extensions).</li>
+            <li>SSRS report and form development. Data migration and integration with DMF, Dual Write.</li>
+            <li>Support UAT and user training. Troubleshoot technical/functional issues.</li>
+          </ul>
+          <strong>Preferred Qualifications:</strong>
+          <ul class="list-disc list-inside">
+            <li>Experience with D365 F&O and AX 2012.</li>
+            <li>Hands-on with X++, Power Platform, Azure DevOps.</li>
+            <li>Knowledge of .NET, REST/SOAP APIs a plus.</li>
+          </ul>
+          <strong>Skills and Competencies:</strong>
+          <ul class="list-disc list-inside">
+            <li>Problem-solver with strong business understanding.</li>
+            <li>Effective communicator with all stakeholders.</li>
+            <li>Self-motivated, accountable, multitasker.</li>
+          </ul>
+        `
+      }
+    };
+
+    function showJobDetail(jobId) {
+      document.getElementById("job-list").classList.add("hidden");
+      document.getElementById("job-detail").classList.remove("hidden");
+      document.getElementById("job-title").textContent = jobData[jobId].title;
+      document.getElementById("job-description").innerHTML = jobData[jobId].description;
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function goBack() {
+      document.getElementById("job-detail").classList.add("hidden");
+      document.getElementById("job-list").classList.remove("hidden");
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+
 
   <!-- Perks Section -->
   <section class="bg-gray-100 py-20">
