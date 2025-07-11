@@ -215,35 +215,64 @@
           <h2 class="text-4xl font-bold mb-2 text-black">Contact us</h2>
           <p class="text-xl text-black mb-6">We want to hear from you</p>
 
-          <form class="space-y-9">
-            <div>
-              <label class="block font-medium text-lg text-gray-800 mb-1">Name</label>
-              <input type="text" placeholder="Your full name" class="w-full px-4 py-3 bg-gray-100 rounded-md outline-none" />
-            </div>
-            <div>
-              <label class="block font-medium text-lg text-gray-800 mb-1">Email</label>
-              <input type="email" placeholder="Your email address" class="w-full px-4 py-3 bg-gray-100 rounded-md outline-none" />
-            </div>
-            <div>
-              <label class="block font-medium text-lg text-gray-800 mb-1">Phone</label>
-              <input type="tel" placeholder="Phone" class="w-full px-4 py-3 bg-gray-100 rounded-md outline-none" />
-            </div>
-            <div>
-              <label class="block font-medium text-lg text-gray-800 mb-1">Subject</label>
-              <input type="text" placeholder="Demo, enquiry, or partnership" class="w-full px-4 py-3 bg-gray-100 rounded-md outline-none" />
-            </div>
-            <div>
-              <label class="block font-medium text-lg text-gray-800 mb-1">Message</label>
-              <input type="text" placeholder="Tell us more about what you’re looking for" class="w-full px-4 py-3 bg-gray-100 rounded-md outline-none" />
-            </div>
-            <button type="submit" class="w-full bg-[#ed8936] text-white text-lg py-3 rounded-md hover:bg-white hover:text-black hover:border-orange-500 border-4 p-8 transition">
-              Submit
-            </button>
-          </form>
+          <form id="contactForm" class="space-y-9">
+  <div>
+    <label for="name" class="block font-medium text-lg text-gray-800 mb-1">Name</label>
+    <input id="name" type="text" placeholder="Your full name" class="w-full px-4 py-3 bg-gray-100 rounded-md outline-none" />
+  </div>
+  <div>
+    <label for="email" class="block font-medium text-lg text-gray-800 mb-1">Email</label>
+    <input id="email" type="email" placeholder="Your email address" class="w-full px-4 py-3 bg-gray-100 rounded-md outline-none" />
+  </div>
+  <div>
+    <label for="phone" class="block font-medium text-lg text-gray-800 mb-1">Phone</label>
+    <input id="phone" type="tel" placeholder="Phone" class="w-full px-4 py-3 bg-gray-100 rounded-md outline-none" />
+  </div>
+  <div>
+    <label for="subject" class="block font-medium text-lg text-gray-800 mb-1">Subject</label>
+    <input id="subject" type="text" placeholder="Demo, enquiry, or partnership" class="w-full px-4 py-3 bg-gray-100 rounded-md outline-none" />
+  </div>
+  <div>
+    <label for="message" class="block font-medium text-lg text-gray-800 mb-1">Message</label>
+    <input id="message" type="text" placeholder="Tell us more about what you’re looking for" class="w-full px-4 py-3 bg-gray-100 rounded-md outline-none" />
+  </div>
+  <button type="submit" class="w-full bg-[#ed8936] text-white text-lg py-3 rounded-md hover:bg-white hover:text-black hover:border-orange-500 border-4 p-8 transition">
+    Submit
+  </button>
+  <p id="thankYouMsg" class="hidden text-orange-600">Thank you! We'll be in touch soon.</p>
+</form>
         </div>
       </div>
     </div>
   </section>
+<script>
+  document.getElementById("contactForm").addEventListener("submit", function (e) {
+    e.preventDefault(); // Prevent default form submission
+
+    // Get form field values
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const subject = document.getElementById("subject").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    // Validation
+    if (!name || !email || !phone || !subject || !message) {
+      alert("Please fill in all fields.");
+      return;
+    }
+
+    // Show thank you message
+    document.getElementById("thankYouMsg").classList.remove("hidden");
+
+    // Optional: Reset form after short delay
+    setTimeout(() => {
+      document.getElementById("contactForm").reset();
+    }, 100); // wait briefly to ensure thank you message is shown
+  });
+</script>
+
+
     <!-- Locations -->
    <section class="py-16 bg-white text-gray-900">
   <div class="max-w-7xl mx-auto px-4">
