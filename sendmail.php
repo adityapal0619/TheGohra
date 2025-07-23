@@ -16,13 +16,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $body .= "Subject: $sub\n";
     $body .= "Message: $message\n";
 
-    $headers = "From: $email\r\n";
+    // From header apni domain ka email rakhein
+    $headers = "From: hello@thegohra.com\r\n";
+    // Reply-To mein user ka email rakhein
     $headers .= "Reply-To: $email\r\n";
 
     if (mail($to, $subject, $body, $headers)) {
-        echo "<h2>Thank you! Your message has been sent successfully.</h2>";
+        header("Location: Contactus.html?success=1");
+        exit();
     } else {
-        echo "<h2>Sorry, something went wrong. Please try again.</h2>";
+        header("Location: Contactus.html?success=0");
+        exit();
     }
 } else {
     echo "Invalid request.";
